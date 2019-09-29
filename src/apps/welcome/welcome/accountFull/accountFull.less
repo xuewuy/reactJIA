@@ -1,0 +1,49 @@
+@import '../../../../assets/styles/custom.less';
+@accountFull-cls: accountFull;
+.@{accountFull-cls}
+{
+    p {
+        padding-right:25px;
+        padding-left: 49px; 
+        //text-indent:24px;
+    }
+    i {
+        width: 22px;
+        height: 22px;
+        cursor:default;
+        float: left;
+        position: relative;
+        left: 19px;
+        top: 1px;
+    }
+    i:before {
+        width: 22px;
+        height: 22px;
+        color: #FFB500;
+        background: #fff;
+        cursor:default;
+    }
+    i:hover:before {
+        width: 22px;
+        height: 22px;
+        color: #FFB500;
+        background: #fff;
+        cursor:default;
+    }
+    &-orange {
+        font-size: 14px;
+        color: #FC9500;
+        line-height: 24px;
+
+    }
+    &-black {
+        font-size: 14px;
+        color: #454545;
+        line-height: 24px;
+    }
+   
+    
+}
+.accountFullMessage .ant-modal-footer button:first-child {
+    display: none;
+}

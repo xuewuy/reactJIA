@@ -1,0 +1,26 @@
+{
+  "name": "redux_lib",
+  "content": {
+    "./node_modules/webpack/buildin/module.js": 699,
+    "./node_modules/redux/lib/index.js": 841,
+    "./node_modules/redux/lib/createStore.js": 842,
+    "./node_modules/lodash/isPlainObject.js": 843,
+    "./node_modules/lodash/_baseGetTag.js": 844,
+    "./node_modules/lodash/_Symbol.js": 845,
+    "./node_modules/lodash/_root.js": 846,
+    "./node_modules/lodash/_freeGlobal.js": 847,
+    "./node_modules/lodash/_getRawTag.js": 848,
+    "./node_modules/lodash/_objectToString.js": 849,
+    "./node_modules/lodash/_getPrototype.js": 850,
+    "./node_modules/lodash/_overArg.js": 851,
+    "./node_modules/lodash/isObjectLike.js": 852,
+    "./node_modules/symbol-observable/index.js": 853,
+    "./node_modules/symbol-observable/lib/index.js": 854,
+    "./node_modules/symbol-observable/lib/ponyfill.js": 855,
+    "./node_modules/redux/lib/combineReducers.js": 856,
+    "./node_modules/redux/lib/utils/warning.js": 857,
+    "./node_modules/redux/lib/bindActionCreators.js": 858,
+    "./node_modules/redux/lib/applyMiddleware.js": 859,
+    "./node_modules/redux/lib/compose.js": 860
+  }
+}

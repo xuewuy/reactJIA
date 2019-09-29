@@ -1,0 +1,53 @@
+@album-prefix-cls: searchinput;
+.@{album-prefix-cls}
+{
+    padding-left: 40px;
+    padding-right: 40px;
+    flex:1;
+
+    &-card {
+        width: 100px;
+        height: 100px;
+    }
+
+    &-img {
+        width: 100%;
+        height: 100px;
+    }
+
+    &-preview{
+        display: flex;
+       justify-content: center;
+       margin-bottom: 16px;
+
+    }
+    
+    &-preview-img {
+        //width: 100%;
+       height:300px;
+    }
+
+    .slick-prev{
+        margin-top: -32px;
+        margin-left: -10px;
+    }
+
+    .slick-next{
+        margin-top: -32px;
+    }
+
+    .slick-slider{
+       padding-bottom: 25px;
+    } 
+
+    .custom-image img {
+        display: block;
+    }
+    .custom-card {
+        padding: 10px 16px;
+    }
+    .custom-card p {
+        color: #999;
+    }
+}
+

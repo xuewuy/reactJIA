@@ -1,0 +1,85 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-control" content="no-cache">
+    <meta http-equiv="Cache" content="no-cache">
+    <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <meta name="renderer" content="webkit">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <title>
+        <%= htmlWebpackPlugin.options.title %>
+    </title>
+    <!-- <link rel="shortcut icon" id="link_ico" href = 'favicon.ico'/> -->
+    <link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="vendor/fixedDataTable/fixed-data-table.min.css">
+    <link rel="stylesheet" type="text/css" href="vendor/imageViewer/viewer.min.css">
+    <style>
+        html,
+        body,
+        #app {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="app" style="display: flex;flex-direction: column;flex: auto;overflow: auto;">
+
+    </div>
+    <div class='imageViewer' style="width:0px; ">
+    </div>
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="vendor/libs/index.js"></script>
+    <script src="vendor/imageViewer/viewer.min.js"></script>
+</body>
+<script>
+    window._hmt = window._hmt || [];
+    window._vds = window._vds || [];
+    (function () {
+        //百度统计
+        if (location.hostname.indexOf("www.rrtimes.com") != -1 || location.hostname.indexOf("yj.rrtimes.com") != -1) {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?cdaf4bd2fb3de749d0971dfdcc456f59";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        } else if (location.hostname.indexOf("test.rrtimes.com") != -1) {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?be2ca3d4fe3a840e4bea80b88de9fc20";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        } else if (location.hostname.indexOf("zhwuji.rrtimes.com") == 0 || location.hostname.indexOf("cs.zhwuji.com") == 0) {
+            window._vds.push(['setAccountId', 'bac635630853b5d5']);
+            var vds = document.createElement('script');
+            vds.type = 'text/javascript';
+            vds.async = true;
+            vds.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'dn-growing.qbox.me/vds.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(vds, s);
+        } else {
+            window._hmt = {
+                data: [], push: function (a) {
+                    this.data.push(a);
+                    if (this.data.length > 100) {
+                        this.data = [];
+                    }
+                }
+            }
+        }
+    })();
+
+</script> 
+<script src="https://user.rrtimes.com/cors.js"></script>
+<script type='text/javascript' src='https://webchat.7moor.com/javascripts/7moorInit.js?accessId=72c217f0-c514-11e7-970f-e53054ecf791&autoShow=false' async='async'></script>
+
+</html>

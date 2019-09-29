@@ -1,0 +1,51 @@
+@import '../../../assets/styles/custom.less';
+
+@checkboxgroupfilter-prefix-cls: checkboxgroupfilter;
+.@{checkboxgroupfilter-prefix-cls}
+{
+	.ant-checkbox-group{
+		display: flex;
+		flex-direction: column;
+		.ant-checkbox-wrapper {
+			margin-left: 10px;
+		}
+
+
+		//.ant-checkbox-group-item:hover{
+		//	background-color: #57c5f7
+		//}
+	}
+
+	&-btns{
+		//overflow: hidden;
+    	padding: 0px 0px 10px 0px;
+    	//display: flex;
+    	//flex-direction:row;
+    	//justify-content:flex-end;
+    	text-align: center;
+
+    	button{
+    		background-color: #3EABE8;
+        	border-radius: 2px;
+        	width:70px;
+	        height: 26px;
+	        border-color:#3EABE8;
+	        border: 0px!important;
+	       	&:hover{
+	            color: #ffffff;
+	            background-color: #57c5f7;
+	            border-color: #57c5f7;
+	        }
+    	}
+	}
+
+	&-btns-ok{
+		margin-right: 16px;
+	}
+
+	&-btns-reset{
+	  	margin-right: 16px;
+	}
+	
+}
+

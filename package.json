@@ -1,7 +1,7 @@
 {
-  "name": "rrtimes-web-master",
+  "name": "xuewy-web-master",
   "version": "0.0.0",
-  "description": "rrtimes web master",
+  "description": "xuewy web master",
   "main": "index.js",
   "license": "MIT",
   "scripts": {

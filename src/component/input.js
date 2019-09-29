@@ -1,0 +1,203 @@
+import React, { Component, PropTypes } from 'react'
+import { Input } from 'antd'
+
+export default class InputComponent extends Component {
+
+    state = {
+        regex: "",  //录入规则   内容为正则表达式
+        value: ""
+    }
+
+    constructor(props) {
+        super(props)
+        this.state.value = props.value
+        this.handleKeyDown = this.handleKeyDown.bind(this)
+        this.handleKeyUp = this.handleKeyUp.bind(this)
+    }
+
+    componentWillReceiveProps(nextProps) {
+        if(nextProps.value !== undefined){
+            this.setState({value:nextProps.value})
+        }
+    }
+    
+
+    stringFromCharCode(keyCode){
+        let ret = ''
+        if(keyCode == 96){
+            ret = '0'
+        }else if(keyCode == 97){
+            ret = '1'
+        }else if(keyCode == 98){
+            ret = '2'
+        }else if(keyCode == 99){
+            ret = '3'
+        }else if(keyCode == 100){
+            ret = '4'
+        }else if(keyCode == 101){
+            ret = '5'
+        }else if(keyCode == 102){
+            ret = '6'
+        }else if(keyCode == 103){
+            ret = '7'
+        }else if(keyCode == 104){
+            ret = '8'
+        }else if(keyCode == 105){
+            ret = '9'
+        }else{
+            ret = String.fromCharCode(keyCode)
+        }
+
+        return ret
+    }
+
+    handleKeyDown(e) {
+    //e.keyCode  8:Backspace  46:Delete 27:Esc 9:Tab 37:Left 39:Right 保持Backspace键和Delete键可用
+        if (e.type !== 'keydown' ||
+            e.keyCode == 8 ||
+            e.keyCode == 46 ||
+            e.keyCode == 27 ||
+            e.keyCode == 9 ||
+            e.keyCode == 37 ||
+            e.keyCode == 39) {
+            return
+        }
+
+        //进行正则判断
+        if (this.props.regex) {
+            //支持Ctrl+C、Ctrl+V粘贴功能
+            if(e.ctrlKey || e.keyCode == '86' || e.keyCode == '229'){
+                return
+            }
+            // 获取光标当前位置
+            let cursorPosition = this.getCursorPosition(e.target)
+            let regExp = new RegExp(this.props.regex)///^[A-Za-z0-9]+$/)
+
+            let selectedText = window.getSelection().toString(),
+                checkText,keyCode
+
+            //Chrome中小数点的ascii码是110（小键盘）、190（大键盘）
+            if(e.keyCode == 46 || e.keyCode == 110 || e.keyCode == 190){
+                keyCode = 46
+                //当为小数正则表达式时，不进行小数点正则检查
+                if(regExp.test('0.0') && e.target.value && e.target.value.indexOf('.') == -1){
+                  return
+                }
+            //189:负号(-)  109:小键盘的负号(-)
+            }else if(e.keyCode == 189 || e.keyCode == 109){
+                // if(!regExp.test(checkText)){
+                //   if (e.preventDefault)
+                //       e.preventDefault()
+                //   if (e.stopPropagation)
+                //       e.stopPropagation()
+                //   return
+                // }
+                keyCode = 45
+
+                //当为负数正则表达式时，不进行负号正则检查
+                if(regExp.test('-1') && cursorPosition == 0 && e.target.value.indexOf('-') == -1){
+                  return
+                }
+            }else{
+                keyCode = e.keyCode
+            }
+
+            let stateValue = this.state.value.toString()
+            if(selectedText != ''){
+                stateValue = stateValue.replace(selectedText, '')
+            }
+
+            //将输入的字符插入数字串中
+            if(stateValue.length == cursorPosition){
+                checkText = stateValue + this.stringFromCharCode(keyCode)
+            }else if(cursorPosition == 0){
+                checkText = this.stringFromCharCode(keyCode) + stateValue
+            }else{
+                checkText = stateValue.substring(0, cursorPosition) +
+                            this.stringFromCharCode(keyCode) +
+                            stateValue.substring(cursorPosition)
+            }
+
+            if(!regExp.test(this.clearThousandsPosition(checkText))){
+              if (e.preventDefault)
+                  e.preventDefault()
+              if (e.stopPropagation)
+                  e.stopPropagation()
+              return
+            }
+        }
+        this.props.onKeyDown && this.props.onKeyDown(e)
+    }
+
+    //去除千分位
+    clearThousandsPosition(num)
+    {
+        let ret
+
+        if(num && num.toString().indexOf(',') > -1){
+            ret = num.toString().replace(/,/g,"")
+        }else{
+            ret = num
+        }
+
+        return ret
+    }
+
+    getCursorPosition(target){
+        var oTxt1 = target;
+        var cursorPosition=-1;
+        if(oTxt1.selectionStart != undefined){//非IE浏览器
+            cursorPosition= oTxt1.selectionStart;
+        }else{//IE
+            var range = document.selection.createRange();
+            range.moveStart("character",-oTxt1.value.length);
+            cursorPosition=range.text.length;
+        }
+
+        return cursorPosition
+    }
+
+    handleKeyUp(e){
+      let repValue=e.target.value
+      if (this.props.regex) {
+        //[\u4e00-\u9fa5] 中文正则表达式  将中文替换为空，实现Input无法输入中文的功能
+        repValue =e.target.value.replace(/[\u4e00-\u9fa5]/g,'')
+
+        //录入了字母+中文时，字母会被录入
+        let regExp = new RegExp(this.props.regex)
+        //若regex为小数正则，则忽略小数点.
+        if((regExp.test('0.0') && e.target.value &&
+            e.target.value.at(e.target.value.length-1) == '.' &&
+            e.target.value != '-.') ||
+           (regExp.test('-1') && e.target.value == '-') ||
+           (e.target.value != '-.')){
+
+        }else{
+            if(!regExp.test(repValue)){
+              repValue = ''
+            }
+        }
+      }
+
+      this.setState({value: repValue})
+      this.props.onKeyUp && this.props.onKeyUp(e)
+    }
+
+    handleChange(e){
+      this.setState({value: e.target.value } )
+
+      this.props.onChange && this.props.onChange(e)
+    }
+
+    render() {
+        //有边框的输入框，去掉左右1px像素
+
+        return (
+            <Input {...this.props}
+            value={this.state.value}
+            onChange ={::this.handleChange}
+            onKeyUp={::this.handleKeyUp}
+            onKeyDown={::this.handleKeyDown}/>
+        )
+    }
+}

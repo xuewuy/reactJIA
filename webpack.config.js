@@ -11,22 +11,6 @@ const HappyPack = require('happypack')
 
 var projectRootPath = path.resolve(__dirname, './');
 
-  
-// const vendors = [
-//     './dist/libs/classnames.dll.js',
-//     './dist/libs/corejs.dll.js',
-//     './dist/libs/echarts.dll.js',
-//     './dist/libs/es6promise.dll.js',
-//     './dist/libs/immutable.dll.js',
-//     './dist/libs/jquery.dll.js',
-//     './dist/libs/lodash.dll.js',
-//     './dist/libs/md5.dll.js',
-//     './dist/libs/moment.dll.js',
-//     './dist/libs/objectassign.dll.js',
-//     './dist/libs/react.dll.js',
-//     './dist/libs/redux.dll.js',
-//     './dist/libs/zrender.dll.js',
-// ];
 module.exports = {
     devtool: 'source-map',
     entry: {
@@ -209,7 +193,7 @@ module.exports = {
         //     }
         // }),
         new HtmlWebpackPlugin({
-            title: '智能财税平台', //标题
+            title: 'xuewuying', //标题
             favicon: './src/assets/img/favicon.ico', //favicon路径
             filename: './index.html', //生成的html存放路径，相对于 path
             template: './src/index.html', //html模板路径

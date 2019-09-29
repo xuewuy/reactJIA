@@ -1,0 +1,32 @@
+{
+  "name": "react_lib",
+  "content": {
+    "./node_modules/object-assign/index.js": 814,
+    "./node_modules/react/react.js": 815,
+    "./node_modules/react/lib/React.js": 816,
+    "./node_modules/react/lib/ReactChildren.js": 817,
+    "./node_modules/react/lib/PooledClass.js": 818,
+    "./node_modules/react/lib/reactProdInvariant.js": 819,
+    "./node_modules/fbjs/lib/invariant.js": 820,
+    "./node_modules/react/lib/ReactElement.js": 821,
+    "./node_modules/react/lib/ReactCurrentOwner.js": 822,
+    "./node_modules/fbjs/lib/warning.js": 823,
+    "./node_modules/fbjs/lib/emptyFunction.js": 824,
+    "./node_modules/react/lib/canDefineProperty.js": 825,
+    "./node_modules/react/lib/ReactElementSymbol.js": 826,
+    "./node_modules/react/lib/traverseAllChildren.js": 827,
+    "./node_modules/react/lib/getIteratorFn.js": 828,
+    "./node_modules/react/lib/KeyEscapeUtils.js": 829,
+    "./node_modules/react/lib/ReactComponent.js": 830,
+    "./node_modules/react/lib/ReactNoopUpdateQueue.js": 831,
+    "./node_modules/fbjs/lib/emptyObject.js": 832,
+    "./node_modules/react/lib/ReactPureComponent.js": 833,
+    "./node_modules/react/lib/ReactClass.js": 834,
+    "./node_modules/react/lib/ReactPropTypeLocationNames.js": 835,
+    "./node_modules/react/lib/ReactDOMFactories.js": 836,
+    "./node_modules/react/lib/ReactPropTypes.js": 837,
+    "./node_modules/react/lib/ReactPropTypesSecret.js": 838,
+    "./node_modules/react/lib/ReactVersion.js": 839,
+    "./node_modules/react/lib/onlyChild.js": 840
+  }
+}

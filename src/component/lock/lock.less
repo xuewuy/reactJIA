@@ -1,0 +1,56 @@
+@loadingmask-prefix-cls: lock;
+.@{loadingmask-prefix-cls}
+{
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   top: 0px;
+   left: 0px;
+   z-index: 9999999;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background-color: rgba(55, 55, 55, 0.6);
+   &-validate{
+    position: absolute;
+    top:20px;
+       height: 45px;
+       .ant-alert-error{
+           background:#fff;
+       }
+   }
+   &-body{
+    width: 400px;
+    height: 300px;
+    background: #fff;
+    padding:45px 85px;
+    border-radius: 10px;
+    h1{
+        font-size: 20px;
+        text-align: center;
+        padding-bottom: 30px;
+    }
+    &-btn{
+        display: flex;
+        flex-direction: column;
+        .ant-btn{
+            //flex:1;解决登录按钮在ie11下不显示的问题
+            margin-bottom: 15px;
+        }
+    }
+    &-switch{
+        text-align: right;
+    }
+    &-user,&-password{
+        display: flex;
+        .ant-input-wrapper{
+            flex:1;
+        }
+        padding-bottom: 15px;
+        label{
+            line-height: 25px;
+        }
+    }
+
+   }
+}

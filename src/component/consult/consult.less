@@ -1,0 +1,63 @@
+@loadingmask-prefix-cls: consult;
+.@{loadingmask-prefix-cls}
+{
+    line-height: 40px !important;
+    position: absolute;
+    right: 0;
+    z-index: 10000000;
+    bottom: 20%;
+    div{
+        width: 50px;
+        height: 50px;
+        cursor: pointer;
+    }
+    &-side1{
+        background: url(img/xfzixun.png) no-repeat;
+        background-size: cover;
+        transition: all .3s;
+    }
+    &-side1:hover {
+        background: url(img/xfzixuna.png) no-repeat;
+        background-size: cover;
+        transition: all .3s;
+    }
+    &-side2{
+        background: url(img/xfweixin.png) no-repeat;
+        background-size: cover;
+        transition: all .3s;
+    }
+    &-side2:hover {
+        background: url(img/xfweixina.png) no-repeat;
+        background-size: cover;
+        transition: all .3s;
+    }
+    &-side3{
+        background: url(img/xfdianhua.png) no-repeat;
+        background-size: cover;
+        transition: all .3s;
+    }
+    &-side3:hover {
+        background: url(img/xfdianhuaa.png) no-repeat;
+        background-size: cover;
+        transition: all .3s;
+    }
+    
+    &-phoneContent{
+        font-size: 16px;
+    }
+    &-weChatContent{
+        img{
+            width: 120px;
+            height: 120px;
+        }
+        p{
+            text-align:center;
+        }
+    }
+    // .rriconfont:hover {
+    //     opacity: 1;
+    // }
+    &-code .ant-popover-inner-content{
+        padding: 4px 5px !important;
+    }
+}

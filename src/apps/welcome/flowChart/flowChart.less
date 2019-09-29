@@ -1,0 +1,39 @@
+@import '../../../assets/styles/custom.less';
+@editClient-prefix-cls: flowChart;
+.@{editClient-prefix-cls} {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    margin: 10px;
+    padding: 10px;
+    background: #fff;
+    &-header{
+        height: 32px;
+        display: flex;
+        flex-direction: row;
+        .ant-btn-primary{
+            background: #189CF6;
+            border-color: #189CF6;
+        }
+        .ant-btn{
+            margin-left: -1px;
+            border-radius: 0;
+        }
+        &-title{
+          font-family: MicrosoftYaHei;
+          font-size: 20px;
+          color: #454545;
+          flex: 1;
+          text-align: center;
+          margin-left: -220px;
+        }
+    }
+    &-content{
+        display: flex;
+        flex: 1;
+        padding-top: 20px;
+        justify-content: center;
+        // align-items: center;
+        overflow-y: auto;
+    }
+}

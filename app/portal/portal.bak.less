@@ -1,0 +1,2393 @@
+@import '../../assets/styles/custom.less';
+@portal-prefix-cls: portal;
+.@{portal-prefix-cls}
+{
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    overflow: hidden;
+    min-width: 1260px;
+    height: 100vh;
+    display: flex;
+    a:hover .rriconfont-helpCenter:before {
+        color: #5eaae3;
+    }
+     /*流水账新手引导*/
+    .guideHide{
+        display:none !important;
+    }
+    .guideShow{
+        display:block !important;
+    }
+    &-appCode{
+        .appIcon{
+            display: flex;
+            align-items: center;
+            cursor:pointer;
+            height: 100%;
+            margin-right: 35px;
+            span{
+                width: 35px;
+                height: 35px;
+                display: inline-block;
+                background: url('./img/appIcon.png') no-repeat;
+                background-size: cover;
+                position: relative;
+                top: -8px;
+                left: 14px;
+            }
+        }
+    }
+    &-appCodeImg{
+        top:51px !important;
+        .ant-popover-inner-content{
+            padding: 6px 8px 6px;
+        }
+        .codeImg{
+            font-size: 12px;
+            color: #7E7E7E;
+            text-align: center;
+        }
+        img{
+            width: 142px;
+        }
+    }
+    &-appCn{
+        position: absolute;
+        left: -155px;
+        bottom: -65px;
+        .appImg{
+            width: 175px;
+            height: 112px;
+            display: inline-block;
+            background: url('./img/appImg.png') no-repeat;
+            background-size: cover;
+            span{
+                display: inline-block;
+                position: absolute;
+                width: 14px;
+                height: 14px;
+                border-radius: 10px;
+                right: 51px;
+                cursor: pointer;
+            }
+        }
+    }
+    &-appCnHide{
+        display: none;
+    }
+    .lsGuide{
+        display:none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.5);
+        z-index: 1000;
+        .openRichardticket{
+            width: 128px;
+            height: 35px;
+            position: absolute;
+            left: 129px;
+            top: 143px;
+            cursor: pointer;
+            z-index: 1000000;
+        }
+        .lsClose{
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            font-size: 12px;
+            color: #ddd;
+            padding: 6px 16px;
+            background: #585858;
+            border-radius: 100px;
+            cursor: pointer;
+        }
+        .portalGuiderImg{
+            background: url('./img/portalGuide.png') no-repeat;
+            background-size: cover;
+            width: 560px;
+            height: 152px;
+            z-index: 1000000;
+            position: absolute;
+            // top: 133px;
+        }
+        .portalGuiderImgIsHide{
+            display:none;
+        }
+    }
+    &-guideClass{
+        z-index:999!important;
+    }
+    .currentGuideHide{
+        display:none !important;
+    }
+    .currentGuideShow{
+        display:block;
+    }
+    &-currentGuide{
+        width: 300px;
+        display:none;
+        position: absolute;
+        text-align: center;
+        top: 50%;
+        z-index: 10;
+        left: 50%;
+        margin-left: -150px;
+        margin-top: -167px;
+        background: #FFFFFF;
+        border: 1px solid #EDEDED;
+        box-shadow: 0 2px 10px 0 rgba(0,0,0,0.30);
+        i{
+            font-size: 20px;
+            color: #8493A5;
+            opacity: 0.6;
+            cursor: pointer;
+            position: absolute;
+            right: 10px;
+        }
+        h5{
+            color: #189CF6;
+            margin: 41px 0 5px;
+            font-size: 12px;
+        }
+        p{
+            font-size: 20px;
+            color: #49586A;
+        }
+        img{
+            width:196px;
+        }
+        button{
+            padding: 11px 69px;
+            background-image: linear-gradient(14deg, #52A1F7 0%, #5BD1F6 100%);
+            box-shadow: 0 0 6px 0 rgba(0,0,0,0.10);
+            border-radius: 100px;
+            border: 0;
+            font-size: 14px;
+            color: #fff;
+            outline: none;
+            margin: 10px 0;
+        }
+        span{
+            display: block;
+            color: #8493A5;
+            font-size: 12px;
+            margin-bottom: 20px;
+            cursor:pointer;
+        }
+    }
+    /*流水账新手引导*/
+    .tax-btn1 {
+        position: absolute;
+        left: 0px;
+        bottom: 30px;
+        height: 95px;
+        width: 120px;
+        z-index: 9999;
+        transition: all .6s;
+        .tax-img {
+            position: absolute;
+            left: -380px;
+            top: -6px;
+            width: 30px;
+            height: 95px;
+            img {
+                width: 380px;
+            }
+        }
+    }
+
+    .tax-btn2 {
+        position: absolute;
+        left: 0px;
+        bottom: 155px;
+        height: 95px;
+        width: 120px;
+        z-index: 9999;
+        transition: all .6s;
+        .tax-img {
+            position: absolute;
+            left: -380px;
+            top: -6px;
+            width: 30px;
+            height: 95px;
+            img {
+                width: 380px;
+            }
+        }
+    }
+    .tax-btn1:hover, .tax-btn2:hover {
+        .tax-a {
+            left: -120px;
+        }
+        .tax-img {
+            left: 0px;
+        }
+    }
+
+    .tax-a {
+        position: absolute;
+        right: 0px;
+        top: 0px;
+        width: 130px;
+        height: 84px;
+        cursor: pointer;
+        img {
+            width: 130px;
+            height: 84px;
+        }
+    }
+
+    .serviceHide{
+        display:none;
+    }
+    .currentGuideHide{
+        display:none;
+    }
+    /*protal页的右下角弹出消息框*/
+    &-popMessage{
+        position: absolute;
+        bottom:0;
+        right: 0;
+        z-index:9999999;
+    }
+    &-probation{
+        width: 380px;
+        height: 230px;
+        background-color:#3EABE8;
+        margin-right:15px;
+        margin-bottom: 10px;
+        color: #fff;
+        text-align: center;
+        img{
+            width: 121px;
+            height:49px;
+            margin-top: 25px;
+        }
+        h3{
+            margin: 16px 0 14px;
+            text-align: center;
+        }
+        .rriconfont-modal-error{
+            position: absolute;
+            top:10px;
+            right: 20px;
+            &::before{
+                font-size:20px;
+                color: #fff;
+            }
+        }
+        button{
+            width: 90px;
+            height: 30px;
+            margin:0 auto;
+            margin-top: 16px;
+        }
+        p{
+            width: 300px;
+            margin:0 auto;
+        }
+    }
+    &-redEnvelope{
+        width: 201px;
+        height: 303px;
+        background-image: url('./img/popMessage.png');
+        background-size:202px 303px;
+        .rriconfont-modal-error{
+            position: absolute;
+            top:28px;
+            right: 5px;
+            &::before{
+                font-size:20px;
+                color: red;
+            }
+        }
+        button{
+            position: absolute;
+            top: 237px;
+            left: 60px;
+            background: none;
+            border: none;
+            color: red;
+            &:hover{
+                background:none;
+                border:none;
+            }
+        }
+        p{
+            position: absolute;
+            width: 150px;
+            left: 28px;
+            top: 140px;
+            color: #fff;
+        }
+    }
+    &-code{
+        top: 151.5px;
+        .ant-popover-inner-content{
+            padding: 3px 3px;
+            img{
+                display: block;
+                width: 118px;
+            }
+            div{
+                text-align: center;
+            }
+        }
+    }
+    &-btn{
+        right:0 !important;
+        left: inherit !important;
+        .portal-wrapper{
+            height: 82px;
+        }
+        .portal-smallCode{
+            width: 30px;
+            height: 28px;
+            background: #3EABE8;
+            margin-top: 1px;
+            position: relative;
+            border-radius: 3px 0px 0px 3px;
+            box-shadow: -1px 0 6px 0 #ade2ff;
+            border: 0;
+            outline: none;
+            &:after{
+                font-family: "rriconfont" !important;
+                content: '\e706';
+                font-size: 23px;
+                font-style: normal;
+                position: relative;
+                top: 2px;
+                color: #fff;
+            }
+        }
+    }
+    &-service{
+        width:180px;
+        height:190px;
+        box-shadow:2px;
+        background: url('./img/service.png') 0 0 no-repeat;
+        position: absolute;
+        background-size: cover;
+        cursor:pointer;
+        right: 21px;
+        top: 50%;
+        z-index: 111;
+        margin-top: -95px;
+        div{
+            width:16px;
+            height:16px;
+            position: relative;
+            top: 8px;
+            right: -144px;
+        }
+        div:after{
+            font-family: "rriconfont" !important;
+            content: '\e705';
+            font-size: 23px;
+            font-style: normal;
+            opacity: 0.8;
+            color: #fff;
+        }
+        div:hover::after{
+            opacity: 1;
+        }
+    }
+    &-currentGuide{
+        width: 300px;
+        position: absolute;
+        text-align: center;
+        top: 50%;
+        z-index: 10;
+        left: 50%;
+        margin-left: -150px;
+        margin-top: -167px;
+        background: #FFFFFF;
+        border: 1px solid #EDEDED;
+        box-shadow: 0 2px 10px 0 rgba(0,0,0,0.30);
+        i{
+            font-size: 20px;
+            color: #8493A5;
+            opacity: 0.6;
+            cursor: pointer;
+            position: absolute;
+            right: 10px;
+        }
+        h5{
+            color: #189CF6;
+            margin: 41px 0 5px;
+            font-size: 12px;
+        }
+        p{
+            font-size: 20px;
+            color: #49586A;
+        }
+        img{
+            width:196px;
+        }
+        button{
+            padding: 11px 69px;
+            background-image: linear-gradient(14deg, #52A1F7 0%, #5BD1F6 100%);
+            box-shadow: 0 0 6px 0 rgba(0,0,0,0.10);
+            border-radius: 100px;
+            border: 0;
+            font-size: 14px;
+            color: #fff;
+            outline: none;
+            margin: 10px 0;
+        }
+        span{
+            display: block;
+            color: #8493A5;
+            font-size: 12px;
+            margin-bottom: 20px;
+            cursor:pointer;
+        }
+    }
+    &-subMenu,&-help-subMenu{
+        & > ul{
+            margin-top: 0px !important;
+            border:1px solid #e9e9e9;
+            .ant-menu-item:hover{
+                background-color: #DEF9FC !important;
+            }
+            &:after{
+                border-bottom-color: #e9e9e9 !important;
+                top: -16px !important;
+            }
+            &:before{
+                content: " ";
+                position: absolute;
+                width: 0;
+                border: 7px solid transparent;
+                height: 0;
+                top: -14px;
+                left: 50%;
+                margin-left: -7px;
+                z-index: 2;
+                border-bottom-color: #fff;
+                display: block;
+            }
+        }
+    }
+    &-help-subMenu .ant-menu-sub{
+        right:-22px !important;
+    }
+    &-help-subMenu a:hover {
+        text-decoration: none;
+    }
+
+    &-help-subMenu .portal-header-nav-help-icon::before {
+        font-size: 28px;
+        margin-top: 6px;
+    }
+    &-messageCenter{
+        button{
+            // width: 56px;
+        }
+        .portal-arrow:before{
+            left: 20%;
+        }
+        .portal-arrow:after{
+            left: 20%;
+        }
+        .portal-header-message-content{
+            width: 200px !important;
+            padding: 4px 4px 15px 15px !important;
+            left: -20px;
+        }
+        .portal-header-message p{
+            padding-left: 0;
+        }
+        .portal-header-message-btns{
+            justify-content: flex-start;
+        }
+    }
+    &-arrow:after{
+        content: " ";
+        bottom: 1px;
+        position: absolute;
+        width: 0;
+        border: 8px solid transparent;
+        height: 0;
+        top: -16px;
+        left: 50%;
+        margin-left: -11px;
+        border-bottom-color: #e8e8e8;
+        display: block;
+    }
+    &-arrow:before{
+        content: " ";
+        position: absolute;
+        width: 0;
+        border: 6px solid transparent;
+        height: 0;
+        top: -12px;
+        left: 50%;
+        margin-left: -9px;
+        z-index: 2;
+        border-bottom-color: #fff;
+        display: block;
+    }
+    &-btn{
+        line-height: 0 !important;
+        cursor:pointer;
+        z-index: 999;
+    }
+    &-big{
+        position:absolute;
+        right:-62px;
+        width:62px;
+        height:100%;
+        background:#3EABE8;
+        color:#fff !important;
+        border-radius: 3px 0px 0px 3px;
+        padding: 6px 0;
+        transition: all .6s;
+        box-shadow: -1px 0 6px 0 #ade2ff;
+        span{
+            display: inline-block;
+            line-height: 20px !important;
+            width: 100%;
+        }
+        .rriconfont--pink-default:before{
+            color:#fff;
+        }
+        .rriconfont:before{
+            font-size:43px;
+        }
+        a{
+            display:block;
+            height:100%;
+            width:100%;
+            position:absolute;
+            top:0;
+        }
+
+    }
+    &-wrapper:hover .portal-big {
+        right: 0;
+    }
+    &-wrapper:hover .portal-little {
+        right: -30px;
+    }
+    &-little{
+        position:absolute;
+        right:0;
+        background:#3EABE8;
+        font-size:12px;
+        color:#fff;
+        width:30px;
+        height:100%;
+        line-height: 16px;
+        padding: 10px 10px;
+        transition: all .6s;
+        border-radius: 3px 0px 0px 3px;
+        box-shadow: -1px 0 6px 0 #ade2ff;
+    }
+   /* &-bigMovie{
+        animation:bigMovie 10s ease 0s forwards;
+
+    }
+    &-littleMovie{
+        animation:littleMovie 10s ease 0s forwards;
+    }*/
+    &-wxCode{
+        position: relative;
+        padding-top: 12px;
+        .rriconfont-libao::before{
+            font-size: 32px;
+            color: #666;
+        }
+        span{
+            vertical-align: super;
+            cursor: pointer;
+        }
+        #protal-QrCode{
+            display:none;
+            position: absolute;
+            padding: 10px;
+            background: #fff;
+            border: 1px solid #e7e6e6;
+            top: 57px;
+            left: -19px;
+            padding-bottom: 25px;
+            span{
+                position: absolute;
+                bottom: 3px;
+                text-align: center;
+                width: 120px;
+            }
+            .qrCode-logo{
+                position: absolute;
+                top: 55px;
+                left: 55px;
+                border: 1px solid #fff;
+                border-radius: 5px;
+                background: #fff;
+            }
+            &::after{
+                content: " ";
+                position: absolute;
+                width: 0;
+                border: 8px solid transparent;
+                height: 0;
+                top: -15px;
+                left: 50%;
+                margin-left: -8px;
+                border-bottom-color: #fff;
+                display: block;
+                z-index: 11;
+            }
+            &::before{
+                content: " ";
+                position: absolute;
+                width: 0;
+                border: 9px solid transparent;
+                height: 0;
+                top: -18px;
+                left: 50%;
+                margin-left: -9px;
+                z-index: 2;
+                border-bottom-color: #e8e8e8;
+                display: block;
+            }
+        }
+        &:hover{
+            #protal-QrCode{
+                display: block;
+            }
+        }
+    }
+    &-phone {
+        height: 58px;
+        line-height: 48px;
+        // font-size: 16px;
+        margin-right: 30px;
+        color:#666;
+        white-space: nowrap;
+        cursor:pointer;
+        // span {
+        //     font-weight: 600;
+        //     color: #eb651b;
+        // }
+    }
+    &-phone::before{
+      font-family: "rriconfont" !important;
+      content: '\e6bd';
+      font-size: 28px;
+      font-style: normal;
+      position: relative;
+      top: 5px;
+    }
+    &-phone:hover {
+        color: #5eaae3;
+    }
+    &-header-nav-help-icon:hover:before {
+        color: #5eaae3;
+    }
+    &-header-logo{
+        .ant-menu-submenu > .ant-menu{
+            left:0 !important;
+        }
+    }
+    &-header .helpDisplay{
+        display:none;
+    }
+    &-header .qqlive:hover{
+        text-decoration: none;
+    }
+    &-header .qqlive:active {
+        color: #666;
+    }
+    &-header .qqlive{
+        line-height: 59px;
+        // width: 56px;
+        color:#666;
+        margin-right: 30px;
+    }
+    &-header .qqlive:hover{
+        color:#5eaae3;
+    }
+    &-header-nav{
+        
+        .ant-menu-submenu{
+            margin:0 !important;
+            border:0 !important;
+        }
+        .ant-menu-sub{
+            min-width: 125px;
+            right: 15px;
+            left: inherit;
+        }
+        .ant-popover{
+            .ant-popover-arrow:after{
+                border-width: 8px;
+                top: -10px;
+                margin-left: -8px;
+                border-bottom-color: #fff;
+            }
+        }
+        .ant-popover-inner{
+            border: 0;
+            box-shadow: 0 2px 6px rgba(100, 100, 100, 0.3);
+        }
+        .ant-popover-inner-content{
+            padding:0;
+            img{
+                width: 130px;
+            }
+        }
+        .ant-menu {
+            img {
+               position: relative;
+               top: -3px;
+            }
+        }
+    }
+    &-header-nav-myYJ {
+        border-bottom: 1px solid #e9e9e9;
+    }
+
+    .portal-main > .ant-tabs > .ant-tabs-bar{
+        padding-left: 8px;
+
+    }
+    .portal-header-orgList{
+        &>ul{
+            width: 100%;
+            min-width: 240px;
+        }
+    }
+    .portal-header-orgList:hover{
+        &:after{
+            content: " ";
+            position: absolute;
+            width: 0;
+            border: 8px solid transparent;
+            height: 0;
+            bottom: -8px;
+            left: 50%;
+            margin-left: -8px;
+            border-bottom-color: #fff;
+            display: block;
+            z-index: 11;
+        }
+        &:before{
+            content: " ";
+            position: absolute;
+            width: 0;
+            border: 9px solid transparent;
+            height: 0;
+            bottom: -7px;
+            left: 50%;
+            margin-left: -9px;
+            z-index: 2;
+            border-bottom-color: #e8e8e8;
+            display: block;
+        }
+    }
+
+    .portal-header-nav-org{
+        position: relative;
+        left:11px;
+        top:0;
+        p{
+            max-width: 464px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+    }
+    // .textCenter i{
+    //     position: relative;
+    //     bottom: 14px;
+    // }
+    &-header-list-title {
+        color: #aaa!important;
+        line-height: 18px!important;
+        height: 18px!important;
+        margin-left: 4px!important;
+        font-size: 12px!important;
+        cursor:default;
+    }
+    &-header-list-title:hover {
+        color: #aaa!important;
+        background:#fff!important;
+    }
+    &-header-message{
+        // margin-right: 40px;
+        .rriconfont-information:before{
+            color: #666;
+            font-size: 29px;
+        }
+        .rriconfont-information:hover:before{
+            color:#5eaae3;
+        }
+        &-content{
+            position: absolute;
+            width: 264px;
+            background:#fff;
+            border:1px solid #e9e9e9;
+            border-radius: 5px;
+            padding: 8px;
+            left: -110px;
+            top: 45px;
+            .textCenter{
+                display:block;
+                text-align:right;
+                margin-bottom:0;
+                height: 25px;
+            }
+        }
+        p{
+            font-family: HiraginoSansGB-W3;
+            font-size: 12px;
+            color: #454545;
+            line-height: 1.5;
+            padding-left: 5px;
+            text-align: left;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            word-break: break-all;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+        }
+        &-title{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            font-size: 12px;
+            color: #454545;
+        }
+        &-btns{
+            display: flex;
+            justify-content: center;
+            margin-top: 16px;
+            a{
+                display: flex;
+                align-items: center;
+                font-family: MicrosoftYaHei;
+                font-size: 10px;
+                color: #3EABE8;
+                letter-spacing: 0;
+            }
+            .rriconfont-move-down:before{
+                color:#3EABE8;
+            }
+            .rriconfont-move-down:before:hover{
+                color:#3EABE8;
+            }
+            span{
+                color:#3EABE8;
+            }
+        }
+        .rriconfont-message:before{
+            font-size: 32px;
+            color: #7F8082;
+            position: relative;
+            top: 6px;
+        }
+        .rriconfont-message:hover:before{
+            color:#5EAAE3;
+        }
+        .ant-badge-dot{
+            top: 14px;
+            left: 23px;
+        }
+    }
+    &-header {
+        height: 58px;
+
+        background: #fff;//@nav-bg-color;
+        //position: fixed;
+        width: 100%;
+        display: flex;
+        flex-direction:row;
+        flex-wrap:nowrap;
+        justify-content: space-between;
+        .ant-menu-horizontal > .ant-menu-submenu-selected,
+        .ant-menu-vertical >.ant-menu-submenu-selected{
+            color: #324658 !important;
+            border-bottom: 0;
+        }
+        li .ant-menu-item {
+            padding-left: 10px;
+            // padding-right: 30px;
+            // max-width: 249px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .rriconfont-close:before{
+            color:#838383;
+        }
+        .rriconfont-close:before:hover{
+            color:#838383;
+        }
+
+        &-bars{
+            color:#fff;
+            border:0px;
+            font-size: x-large;
+            margin-left: 10px;
+            position: absolute;
+            margin-top: 10px;
+
+        }
+        //box-shadow: 0 4px 4px fade(#000, 15);
+        border-bottom: solid;
+        border-width: 1px;
+        border-color: #d8d8d8;//#c7c9cb;
+        &-logo {
+            //display: inline-block;
+            //margin: 10px 0 0 90px;
+            //height: 33px;
+            display: inline-flex;
+            height: 58px;
+
+            & img {
+                vertical-align: top;
+                display: block;
+                //height: 57px;
+                width: 130px;
+            }
+            & a {
+                display: block;
+            }
+
+            //& .ant-menu-submenu {
+            //    height: 58px;
+            //}
+            & .ant-menu-submenu > .ant-menu {
+                //position: relative;
+                left: -9px;
+                top: 58px;
+                margin-left: 0px;
+                max-height: 500px;
+                overflow-y: auto;
+                padding-right: 1px;
+            }
+
+            & .ant-menu > .ant-menu-submenu > .ant-menu-submenu-title {
+                height: 50px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding-left: 0px;
+            }
+
+            .ant-menu-submenu-title:hover {
+                padding-left: 0px;
+            }
+
+            & .ant-menu > .ant-menu-submenu > .ant-menu-submenu-title:after {
+                display: none;
+            }
+
+            //& .ant-menu-horizontal {
+            //    border-bottom-color: transparent;
+            //}
+            & .ant-menu {
+                background: transparent;
+                color: #343434;//@text-color-light;
+                line-height: 62px;
+                z-index: 950;
+                border: none;
+            }
+            & .ant-menu-submenu-active {
+                //color: @link-hover-color;
+                //border-bottom-color: @link-hover-color;
+                //border-bottom: 2px solid #2db7f5;
+            }
+
+            & .ant-menu-sub{
+                background: #fff;
+                color:@text-color;
+
+            }
+
+            //& .ant-menu-submenu:last-of-type{
+            //    width: 150px
+            //}
+
+            & .ant-menu-item-active , .ant-menu-submenu-active , .ant-menu-submenu-title:hover {
+                background-color: transparent;
+                //color: @link-hover-color;
+            }
+
+            & .ant-menu-vertical >.ant-menu-item-active {
+                background-color: #ededef;
+            }
+
+            & .ant-menu-vertical .ant-menu-submenu-vertical>ul>li{ //左边企业下拉列表的字号调整
+                font-size: 14px;
+                line-height: 35px;
+                i{
+                    position: relative;
+                    top:4px;
+                }
+                .anticon-right{
+                    position: absolute;
+                    top: 10px;
+                    right: -10px;
+                }
+                .anticon-check{
+                    position: absolute;
+                    top: 17px;
+                    right: 0px;
+                }
+                .orgTypeCompany::before{
+                    font-family: "rriconfont" !important;
+                    content: '\E67a';
+                    font-size: 25px;
+                    font-style: normal;
+                    // opacity: 0.6;
+                    margin-right: 5px;
+                }
+                .orgTypeCustomer::before{
+                    font-family: "rriconfont" !important;
+                    content: '\E640';
+                    font-size: 25px;
+                    font-style: normal;
+                    // opacity: 0.6;
+                    margin-right: 5px;
+                }
+
+            }
+
+            &-downicon{
+                margin-left: 3px
+            }
+
+        }
+
+        &-nav {
+            float: right;
+            margin-right: 0px;
+            //line-height: 58px;
+            height: 58px;
+            position: relative;
+            display: flex;
+            flex-direction: row;
+            z-index: 950;
+
+            &-li div{
+                padding-bottom: 4px;
+            }
+            & .ant-menu-horizontal {
+                border-bottom-color: transparent;
+            }
+
+            & .ant-menu-horizontal>li:hover{
+                //border-bottom-color: @link-hover-color;
+            }
+
+            & .ant-menu {
+                background: transparent;
+                color: #343434;//@text-color-light;
+                line-height: 40px;
+            }
+
+            & .ant-menu-horizontal > .ant-menu-item-active {
+                //color: @link-hover-color;
+               // border-bottom-color: @link-hover-color;
+            }
+
+            .ant-menu-horizontal > .ant-menu-submenu {
+                top: 9px;
+            }
+
+            .ant-menu-submenu-horizontal > .ant-menu {
+                margin-top: 9px;
+                &:after{
+                    content: '';
+                    border: 8px solid transparent;
+                    border-bottom: 8px solid #fff;
+                    position: absolute;
+                    top: -14px;
+                    left: 50%;
+                    margin-left: -8px;
+                }
+            }
+
+            .ant-menu-submenu-horizontal>ul>li{  //nav右边下拉列表的字号调整
+                font-size: 14px;
+            }
+
+
+
+            & .ant-menu-sub{
+                background: #fff;
+                color:@text-color;
+
+            }
+
+            //& .ant-menu-submenu:last-of-type{
+            //    width: 150px
+            //}
+
+            & .ant-menu-item-active , .ant-menu-submenu-active , .ant-menu-submenu-title:hover {
+                background-color: transparent;
+               // color: @link-hover-color;
+            }
+
+            & .ant-menu-vertical >.ant-menu-item-active {
+                background-color: #ededef;
+            }
+
+            & .ant-menu-submenu-title {
+                padding: 0 15px;
+                height: 48px;
+                display: flex;
+                justify-content: flex-end;
+                span>span{
+                    font-size: 16px;
+                }
+            }
+
+            &-icon{
+                font-size: x-large
+            }
+
+            &-downicon{
+                margin-left: 12px
+            }
+
+            &-search {
+                border:1px solid #c7c9cb;
+                border-radius:100px;
+                width:200px;
+                height: 30px;
+
+                display: inline-block;
+                padding-left:15px;
+                padding-right: 25px;
+            }
+
+            &-search-div {
+                display: flex;
+                margin-right: 20px;
+                align-items: center
+            }
+
+            &-search-icon {
+                z-index: 0;
+            }
+
+            &-search-icon::before {
+                font-family: "rriconfont" !important;
+                content: '\E601';
+                font-size: 30px;
+                font-style: normal;
+                 opacity: 0.6;
+
+                margin-left: -32px;
+            }
+
+            &-search-icon:hover {
+                color: #00aff0;
+            }
+
+            &-favo-icon::before {
+                font-family: "rriconfont" !important;
+                content: '\E602';
+                font-size: 32px;
+                font-style: normal;
+                // opacity: 0.6;
+            }
+
+            &-msg-icon::before {
+                font-family: "rriconfont" !important;
+                content: '\E60b';
+                font-size: 32px;
+                font-style: normal;
+                // opacity: 0.6;
+            }
+
+            &-online-icon::before {
+                font-family: "rriconfont" !important;
+                content: '\E60c';
+                font-size: 32px;
+                font-style: normal;
+                // opacity: 0.6;
+            }
+
+            //&-org-icon::before {
+            //    font-family: "rriconfont" !important;
+            //    content: '\E60d';
+            //    font-size: 32px;
+            //    font-style: normal;
+            //    opacity: 0.6;
+            //}
+
+            &-setting-icon::before {
+                font-family: "rriconfont" !important;
+                content: '\E615';
+                font-size: 22px;
+                font-style: normal;
+                // opacity: 0.6;
+                margin-right: 5px;
+            }
+
+            &-myExam-icon::before {
+                font-family: "rriconfont" !important;
+                content: '\E70c';
+                font-size: 22px;
+                font-style: normal;
+                margin-right: 5px;
+            }
+
+            &-about-icon::before {
+                font-family: "rriconfont" !important;
+                content: '\E63e';
+                font-size: 22px;
+                font-style: normal;
+                // opacity: 0.6;
+                margin-right: 5px;
+            }
+
+            &-help-icon::before {
+                font-family: "rriconfont" !important;
+                content: '\E63d';
+                font-size: 22px;
+                font-style: normal;
+                // opacity: 0.6;
+                margin-right: 5px;
+            }
+            /**
+             * 教学版流程图
+             */
+            &-beginnerGuidance-icon::before {
+                font-family: "rriconfont" !important;
+                content: '\E6c0';
+                font-size: 22px;
+                font-style: normal;
+                // opacity: 0.6;
+                margin-right: 5px;
+            }
+            &-feedback-icon::before{
+                font-family: "rriconfont" !important;
+                content: '\E6d8';
+                font-size: 22px;
+                font-style: normal;
+                margin-right: 5px;
+            }
+            &-helpCenter-icon::before {
+                font-family: "rriconfont" !important;
+                content: '\e6c1';
+                font-size: 22px;
+                font-style: normal;
+                margin-right: 5px;
+            }
+            .rriconfont-helpCenter:before {
+                position: relative;
+                top: 6px;
+            }
+            &-logout-icon::before {
+                font-family: "rriconfont" !important;
+                content: '\E636';
+                font-size: 20px;
+                font-style: normal;
+                // opacity: 0.6;
+                margin-right: 5px;
+            }
+
+            &-message-icon::before {
+                font-family: "rriconfont" !important;
+                content: '\E623';
+                font-size: 20px;
+                font-style: normal;
+                // opacity: 0.6;
+                margin-right: 5px;
+            }
+
+            &-phone-icon::before {
+                font-family: "rriconfont" !important;
+                content: '\E613';
+                font-size: 20px;
+                font-style: normal;
+                // opacity: 0.6;
+                margin-right: 5px;
+            }
+
+            &-manual-icon::before {
+                font-family: "rriconfont" !important;
+                content: '\E61f';
+                font-size: 20px;
+                font-style: normal;
+                // opacity: 0.6;
+                margin-right: 5px;
+            }
+
+            &-myYJ-icon::before {
+                font-family: "rriconfont" !important;
+                content: '\E60A';
+                font-size: 25px;
+                font-style: normal;
+                // opacity: 0.6;
+                margin-right: 5px;
+            }
+
+            &-myYJ-right {
+                margin-left: 20px;
+            }
+
+            &-myYJ-right::before {
+                font-family: "rriconfont" !important;
+                content: '\E627';
+                font-size: 25px;
+                font-style: normal;
+                // opacity: 0.6;
+                margin-right: 5px;
+                // display: block;
+                // position: relative;
+                // right: -28px;
+            }
+
+            &-org {
+                display: flex;
+                align-items:center;
+                font-size: 16px;
+                // opacity: 0.9;
+            }
+        }
+
+        &-nav-favo{
+            display: flex;
+            align-items:center;
+        }
+
+        &-nav-li{
+            display: flex;
+            align-items:center;
+        }
+
+        &-toggle {
+            border: 1px solid #d8d8d8;//#e1e5e8;
+            margin-top: 57px;
+            height: 37px;
+            width: 11px;
+            border-radius:2px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 900;
+            display:none; // 加
+        }
+
+        &-toggle:hover {
+            border: 1px solid #00c1f8;
+
+            i{
+                color: #00c1f8;
+            }
+        }
+    }
+
+    &-left {
+        background: #202c3c;
+        width: 130px;
+        min-width: 130px;
+        flex-direction: column;
+        z-index: 999;
+        margin-top: -1px;
+
+
+        &-span {
+            padding: 5px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            height: 37px;
+            background:#202c3c;
+            border-bottom: solid;
+            border-bottom-width: 1px;
+            border-bottom-color: #414b59;
+            position: relative;
+        }
+
+        &-span-i::before {
+            font-family: "rriconfont" !important;
+            content: '\E601';
+            position: absolute;
+            top: 2px;
+            left: 7px;
+            z-index:2;
+            font-size: 22px;
+            font-style: normal;
+            color: #c7cac1;
+        }
+
+        // &-span-i:hover {
+        //     color: #00aff0;
+        // }
+
+        &-search {
+            background: #293544;
+            border: 1px solid #4c5663;
+            border-radius: 100px;
+            height: 26px;
+            display: inline-block;
+            padding-left: 25px;
+            color: #c7cac1;
+        }
+
+        &-menu {
+            //overflow: auto
+            .ant-menu-dark .ant-menu-submenu-selected{
+                background: #324658 !important;
+                border-bottom: 0;
+            }
+        }
+
+        &-menu > .ant-menu {
+            height: 100%;
+            .ant-menu-item{
+                overflow: hidden;
+            }
+        }
+
+        &.ant-menu-root {
+            height: 100%
+        }
+
+        //菜单的背景色\字号\字色
+        //带子菜单的一级菜单
+        .ant-menu-dark,
+        .ant-menu-dark .ant-menu-submenu-inline.ant-menu-submenu {
+            color: #d4dde6!important;
+            background: #202c3c;
+            font-size: 12px;
+            //opacity: 0.89;
+        }
+
+        .ant-menu-dark,
+        .ant-menu-dark .ant-menu-submenu-vertical.ant-menu-submenu {
+            color: #d4dde6!important;
+            background: #1F2C3C;
+            font-size: 12px;
+            //opacity: 0.89;
+        }
+        
+
+        //子菜单
+        .ant-menu-dark .ant-menu-inline.ant-menu-sub {
+            color: #d4dde6!important;
+            background: #3EABE8;
+            font-size: 12px;
+            //opacity: 0.89;
+        }
+
+        .ant-menu-dark .ant-menu-vertical.ant-menu-sub {
+             color: #d4dde6!important;
+            background: #3EABE8;
+            font-size: 12px;
+            //opacity: 0.89;
+        }
+        .ant-menu-dark .ant-menu-item, .ant-menu-submenu{
+            height: 50px;
+            line-height: 50px;
+        }
+
+        .ant-menu-dark .ant-menu-item, .ant-menu-submenu .ant-menu-submenu-title{
+            height: 50px;
+            line-height: 50px;
+            color: #d4dde6!important;
+         }
+
+        //不带子菜单的一级菜单 字号\字色
+        .ant-menu-dark .ant-menu-item span {
+            color: #d4dde6!important;
+            font-size: 14px;
+            font-weight:300;
+            //opacity: 0.89;
+            //font-family:MicrosoftYaHei;
+        }
+
+        //子菜单中,含有再下一级菜单的项
+        .ant-menu-dark .ant-menu-inline.ant-menu-sub li {
+            background: transparent;
+        }
+
+        //鼠标hover时的背景色
+        //带子菜单的一级菜单
+        .ant-menu-dark .ant-menu-submenu-active.ant-menu-submenu {
+            color: #d4dde6;
+            background: #374f62;
+            font-size: 12px;
+            //opacity: 0.89;
+        }
+
+        //子菜单
+        .ant-menu-dark .ant-menu-inline.ant-menu-sub >.ant-menu-item-active {
+            color: #d4dde6;
+            background: #314556;
+            font-size: 12px;
+        }
+        //不带子菜单的一级菜单
+        .ant-menu-dark .ant-menu-item-active {
+            color: #d4dde6;
+            background: #374f62;
+            font-size: 12px;
+            //opacity: 0.89;
+        }
+
+
+        //菜单左边距
+        //带下级菜单的一级菜单
+        .ant-menu-inline > .ant-menu-submenu > .ant-menu-submenu-title {
+            font-size: 14px;
+            font-weight:14px;
+            padding-left: 10px !important;
+        }
+
+        //菜单左边距
+        //带下级菜单的一级菜单
+        .ant-menu-vertical> .ant-menu-submenu > .ant-menu-submenu-title {
+            font-size: 14px;
+            font-weight: 300;
+            padding-left: 10px !important;
+        }
+
+        .ant-menu-sub >.ant-menu-item{
+            height: 34px;
+            line-height: 34px;
+        }
+        //不带下级菜单的一级菜单
+        .ant-menu-dark .ant-menu-item {
+            padding-left: 10px !important;
+        }
+
+        /*
+        //子菜单(同设置字号的地方)
+        .ant-menu-dark .ant-menu-inline.ant-menu-sub >.ant-menu-item {
+            padding-left: 30px !important;
+        }
+        //子菜单中,含有再下一级菜单的项
+        .ant-menu-dark .ant-menu-sub.ant-menu-inline >.ant-menu-submenu >.ant-menu-submenu-title {
+            padding-left: 30px !important;
+            background: transparent;
+        }
+        */
+
+        //菜单被点击以后(select状态)的背景色. 我觉得不应该做这种样式...
+        .ant-menu-dark.ant-menu-inline .ant-menu-item-selected {
+            background-color: #324658 !important;
+        }
+
+        .ant-menu-dark.ant-menu-vertical .ant-menu-item-selected {
+            background-color: #324658 !important;
+        }
+
+        .ant-menu-submenu-vertical > .ant-menu{
+            margin-left: 0px;
+            border-radius: 0px;
+            min-width:120px !important;
+        }
+        .portal-left .ant-menu-dark .ant-menu-item span{
+            color: #d4dde6;
+        }
+
+
+        .portal-left .ant-menu-vertical > .ant-menu-submenu > .ant-menu-submenu-title  span{
+            color: #d4dde6;
+        }
+
+
+        .rriconfont{
+            float:left;
+            line-height: 1.7;
+            &:before{
+                font-size: 28px;
+                color: #d4dde6;
+                margin-right: 3px;
+            }
+            &:before:hover{
+                color: #d4dde6;
+            }
+        }
+
+
+    }
+    &-header-logo{
+        .portal-left-span-i::before {
+            font-family: rriconfont!important;
+            content: "\E601";
+            position: relative;
+            margin-left: -31px;
+            top:0;
+            font-size: 22px;
+            font-style: normal;
+        }
+    }
+    main {
+        margin-top: 0px;
+        display: flex;
+        flex:1;
+        overflow: hidden;
+    }
+
+    &-main-myDesk {
+         & .ant-tabs > .ant-tabs-bar .ant-tabs-nav-scroll {
+            .ant-tabs-tab:nth-child(2){  //我的桌面不可删除操作
+                i{
+                    display: none;
+                }
+            }
+         }
+    }
+
+    &-main {
+        //margin-top: 1px;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        position: relative;
+        z-index: initial;
+
+        .ant-tabs-nav {
+            // padding-top: 5px;
+        }
+
+        .ant-tabs.ant-tabs-card > .ant-tabs-bar .ant-tabs-tab-inner {
+            padding-top: 5px;
+            font-size: 14px;
+            font-style: normal;
+        }
+
+        .ant-tabs.ant-tabs-card > .ant-tabs-bar .ant-tabs-tab {
+            border: 1px solid transparent;
+            //border-top-width: 1px;
+            background: none;
+            margin: 1px;
+        }
+
+        .ant-tabs.ant-tabs-card > .ant-tabs-bar .ant-tabs-tab-active {
+            border: 1px solid #d9d9d9;
+            border-bottom: 0;
+            //border-top-width: 1px;
+            //border-top-color: #3eabe8;
+            border-radius: 6px 6px 0 0;
+            background: #f6f6f6;
+            .ant-tabs-tab-inner>div{
+                font-size: 14px;
+            }
+        }
+
+        & .ant-tabs {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+        & >.ant-tabs > .ant-tabs-bar {
+            margin-bottom: 0px;
+            padding-left: 20px;
+            background: #e5e6e6;
+        }
+        & .ant-tabs > .ant-tabs-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            position:absolute;
+            top: 36px;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+        & .ant-tabs > .ant-tabs-content > span {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        & .ant-tabs > .ant-tabs-content > .ant-tabs-tabpane {
+            //width:100%;
+            //height: 100%;
+            flex:1;
+            background: #f6f6f6;
+            display: flex;
+            overflow: hidden;
+            //display: block ;
+            //position: relative;
+            //display: flex;
+            //flex-direction:column;
+        }
+
+        & .ant-tabs > .ant-tabs-content > .ant-tabs-tabpane-inactive {
+            display: none
+        }
+
+
+        & .ant-tabs > .ant-tabs-bar .ant-tabs-nav-scroll {
+            //width: 100vh;
+
+            .ant-tabs-nav .ant-tabs-tab:nth-child(2) div{
+                padding-right:0px;
+            }
+            .ant-tabs-tab{      //  解决tab页签切换出现的晃动  start
+                width: 115px;
+
+                text-align: center;
+//                width:auto;
+                padding-left: 10px;
+                padding-right: 10px;
+                div{
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    word-break: break-all;
+                    padding-right:12px;
+                    position: relative;
+                     i{
+                        position: absolute;
+                        top: 7px;
+                        right: 0;
+                    }
+                }
+            }
+
+            .ant-tabs-tab:nth-child(2){  //我的桌面不可删除操作
+                i{
+                    //display: none;
+                }
+            }
+
+            .ant-tabs-tab-active{
+                width: 115px;
+                padding: 7px 0px;
+//                width:auto;
+                padding-left: 10px;
+                padding-right: 10px;
+                text-align: center;
+                div{
+                    i{
+                        position: absolute;
+                        top: 7px;
+                        right: 0;
+                    }
+                }
+            }                 //  解决tab页签切换出现的晃动  end
+        }
+
+        & .ant-tabs > .ant-tabs-bar .ant-tabs-extra-content {
+            padding:2px 24px 0px 0px;
+            .expand-btn{
+                border: none;
+                padding: 0 0 0 8px;
+                .rriconfont{
+                    width: 28px;
+                    height: 28px;
+                    border: 1px solid #dddddd;
+                    background: #f9f9f9;
+                    border-radius: 2px;
+                    &::before{
+                        color: #3EABE8;
+                        margin-top: 2px;
+                    }
+                    &:hover{
+                        &::before{
+                            color:#57c5f7;
+                        }
+                    }
+                }
+            }
+            & > .expand-btn{
+                margin-top: -3px;
+            }
+        }
+
+        .ant-tabs.ant-tabs-editable-card > .ant-tabs-bar .ant-tabs-tab:not(.ant-tabs-tab-active):hover {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+        .ant-card-head {
+            padding: 0 10px;
+        }
+
+        .ant-card-head-title {
+            display: inline;
+        }
+
+        .ant-card-extra {
+            top : 10px;
+            right: 10px;
+        }
+    }
+
+    &-image-baobiao::before{
+        font-family: "rriconfont" !important;
+        content: '\E711';
+        font-size: 28px;
+        font-style: normal;
+        margin-right: 3px;
+        float:left;
+    }
+
+    &-image-dixiao::before{
+        font-family: "rriconfont" !important;
+        content: '\E712';
+        font-size: 28px;
+        font-style: normal;
+        margin-right: 3px;
+        float:left;
+    }
+
+    &-image-myyj::before{
+        font-family: "rriconfont" !important;
+        content: '\E622';
+        font-size: 28px;
+        font-style: normal;
+        margin-right: 3px;
+        float:left;
+    }
+
+    &-image-systemsetting::before{
+        font-family: "rriconfont" !important;
+        content: '\E60a';
+        font-size: 28px;
+        font-style: normal;
+        margin-right: 3px;
+
+        //background: url(./img/portal.png) no-repeat left;
+        //background-position: 0px -244px;
+        //height: 30px;
+        //width: 25px;
+        float:left;
+    }
+
+    &-image-customermanager::before{
+        font-family: "rriconfont" !important;
+        content: '\E603';
+        font-size: 28px;
+        font-style: normal;
+        margin-right: 3px;
+        //background: url(./img/portal.png) no-repeat left;
+        //background-position: 0px -286px;
+        //height: 30px;
+        //width: 25px;
+        float:left;
+    }
+
+    &-image-cashmanager::before {
+        font-family: "rriconfont" !important;
+        content: '\E607';
+        font-size: 28px;
+        font-style: normal;
+        float:left;
+        margin-right: 3px;
+
+    }
+
+
+     &-image-assignjobs::before{
+         font-family: "rriconfont" !important;
+         content: '\E606';
+         font-size: 28px;
+         font-style: normal;
+         margin-right: 3px;
+        //background: url(./img/portal.png) no-repeat left;
+        //background-position: 0px -328px;
+        //height: 30px;
+        //width: 25px;
+        float:left;
+    }
+
+    &-image-finishingnote::before{
+        font-family: "rriconfont" !important;
+        content: '\E605';
+        font-size: 28px;
+        font-style: normal;
+        margin-right: 3px;
+        //background: url(./img/portal.png) no-repeat left;
+        //background-position: 0px -372px;
+        //height: 30px;
+        //width: 25px;
+        float:left;
+    }
+
+    &-image-fapiaochayan::before{
+        font-family: "rriconfont" !important;
+        content: '\E6e7';
+        font-size: 28px;
+        font-style: normal;
+        margin-right: 3px;
+        float:left;
+    }
+    &-image-fapiaoguanli::before{
+        font-family: "rriconfont" !important;
+        content: '\E6ca';
+        font-size: 28px;
+        font-style: normal;
+        margin-right: 3px;
+        float:left;
+    }
+
+   &-image-finance::before{
+        font-family: "rriconfont" !important;
+        content: '\E600';
+        font-size: 28px;
+        font-style: normal;
+        margin-right: 3px;
+        //background: url(./img/portal.png) no-repeat left;
+        float:left;
+   }
+
+    &-image-qiyexinxi::before{
+        font-family: "rriconfont" !important;
+        content: '\E68F';
+        font-size: 28px;
+        font-style: normal;
+        margin-right: 3px;
+        //background: url(./img/portal.png) no-repeat left;
+        //background-position: 0px -372px;
+        //height: 30px;
+        //width: 25px;
+        float:left;
+    }
+
+    &-image-caiwufenxi::before{
+        font-family: "rriconfont" !important;
+        content: '\E6e1';
+        font-size: 28px;
+        font-style: normal;
+        margin-right: 3px;
+        //background: url(./img/portal.png) no-repeat left;
+        //background-position: 0px -372px;
+        //height: 30px;
+        //width: 25px;
+        float:left;
+    }
+
+    &-image-fengxianjiancha::before{
+        font-family: "rriconfont" !important;
+        content: '\E6e0';
+        font-size: 28px;
+        font-style: normal;
+        margin-right: 3px;
+        //background: url(./img/portal.png) no-repeat left;
+        //background-position: 0px -372px;
+        //height: 30px;
+        //width: 25px;
+        float:left;
+    }
+
+    &-image-chushihua::before{
+        font-family: "rriconfont" !important;
+        content: '\e6e4';
+        font-size: 28px;
+        font-style: normal;
+        margin-right: 3px;
+        float:left;
+    }
+
+    &-image-shuikuan::before{
+        font-family: "rriconfont" !important;
+        content: '\E69F';
+        font-size: 28px;
+        font-style: normal;
+        margin-right: 3px;
+        margin-top: 2px;
+        float:left;
+    }
+
+    &-image-shenbao::before{
+        font-family: "rriconfont" !important;
+        content: '\E69E';
+        font-size: 28px;
+        font-style: normal;
+        margin-right: 3px;
+        float:left;
+    }
+
+    &-image-jiezhang::before{
+        font-family: "rriconfont" !important;
+        content: '\E69D';
+        font-size: 28px;
+        font-style: normal;
+        margin-right: 3px;
+        float:left;
+    }
+    &-image-hetong::before{
+        font-family: "rriconfont" !important;
+        content: '\e616';
+        font-size: 28px;
+        font-style: normal;
+        margin-right: 3px;
+        float:left;
+    }
+    &-image-poweroff::before{
+        font-family: "rriconfont" !important;
+        content: '\e6d5';
+        font-size: 28px;
+        font-style: normal;
+        margin-right: 3px;
+        float:left;
+    }
+    &-image-wentiguanli::before{
+        font-family: "rriconfont" !important;
+        content: '\E690';
+        font-size: 28px;
+        font-style: normal;
+        margin-right: 3px;
+        //background: url(./img/portal.png) no-repeat left;
+        //background-position: 0px -452px;
+        //height: 30px;
+        //width: 25px;
+        float:left;
+    }
+
+    &-image-customerservice::before{
+        font-family: "rriconfont" !important;
+        content: '\E678';
+        font-size: 28px;
+        font-style: normal;
+        margin-right: 3px;
+        //background: url(./img/portal.png) no-repeat left;
+        //background-position: 0px -286px;
+        //height: 30px;
+        //width: 25px;
+        float:left;
+    }
+
+
+    &-image-report::before{
+        font-family: "rriconfont" !important;
+        content: '\E609';
+        font-size: 28px;
+        font-style: normal;
+        margin-right: 3px;
+        //background: url(./img/portal.png) no-repeat left;
+        //background-position: 0px -410px;
+        //height: 30px;
+        //width: 25px;
+        float:left;
+    }
+
+    &-image-bossclient::before{
+        font-family: "rriconfont" !important;
+        content: '\E6da';
+        font-size: 28px;
+        font-style: normal;
+        float:left;
+        margin-right: 3px;
+    }
+
+    &-image-payroll::before{
+        font-family: "rriconfont" !important;
+        content: '\E644';
+        font-size: 28px;
+        font-style: normal;
+        float:left;
+        margin-right: 3px;
+    }
+
+
+    &-image-invoicing::before{
+        font-family: "rriconfont" !important;
+        content: '\e68a';
+        font-size: 28px;
+        font-style: normal;
+        float:left;
+        margin-right: 3px;
+    }
+
+    &-image-home::before{
+        font-family: "rriconfont" !important;
+        content: '\e69c';
+        font-size: 28px;
+        font-style: normal;
+        float:left;
+        margin-right: 3px;
+    }
+
+
+    &-image-assets::before{
+        font-family: "rriconfont" !important;
+        content: '\e68b';
+        font-size: 28px;
+        font-style: normal;
+        float:left;
+        margin-right: 3px;
+    }
+
+    &-image-beta-level3{
+        position: relative;
+        right: 6px;
+        width: 22px;
+        height: 14px;
+        display: inline-block;
+        top: -14px;
+        background: url(./img/new.png) no-repeat;
+        background-size:100%;
+    }
+    &-image-beta-level4{
+        position: relative;
+        right: -5px;
+        width: 22px;
+        height: 14px;
+        display: inline-block;
+        top: -6px;
+        background: url(./img/new.png) no-repeat;
+        background-size:100%;
+    }
+    &-image-beta-level5{
+        position: relative;
+        right: 6px;
+        width: 22px;
+        height: 14px;
+        display: inline-block;
+        top: -14px;
+        background: url(./img/new.png) no-repeat;
+        background-size:100%;
+    }
+    &-image-beta-level1{
+        position: absolute;
+        right: -2px;
+        width: 10px;
+        height: 10px;
+        top: -30px;
+    }
+
+    &-image-beta-level1::before{
+        font-family: "rriconfont" !important;
+        content: '\E70a';
+        //content: 'beta';
+        font-size: 40px;
+        font-style: normal;
+        color: #ef8600;
+        //float:left;
+        //margin-right: 3px;
+        //width:10px;
+        //height: 10px;
+        //position: absolute;
+    }
+
+    &-image-beta-level2{
+        width: 10px;
+        height: 10px;
+    }
+
+    &-image-beta-level2::before{
+        font-family: "rriconfont" !important;
+        content: '\E70b';
+        font-size: 40px;
+        color: #ef8600;
+        font-style: normal;
+        //float:left;
+        //margin-right: 3px;
+        //width:10px;
+        //height: 10px;
+        position: absolute;
+    }
+
+    &-image-submenu{
+        width: 6px;
+        height: 6px;
+        background: #ffffff;
+        opacity: 0.8;
+        border-radius: 3px;
+        float:left;
+        display:none;
+        margin-top: 16px;
+        margin-right: 5px;
+    }
+
+    .iframe {
+        position:absolute;
+        margin:1px;
+        padding: 0px;
+        border: 0px;
+        height: 100%;
+        width: 100%;
+    }
+
+    @font-face {
+        font-family: 'rriconfont';
+        src: url('./../../assets/rriconfont/iconfont.eot'); /* IE9*/
+        src: url('./../../assets/rriconfont/iconfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+        url('./../../assets/rriconfont/iconfont.woff') format('woff'), /* chrome、firefox */
+        url('./../../assets/rriconfont/iconfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+        url('./../../assets/rriconfont/iconfont.svg#iconfont') format('svg'); /* iOS 4.1- */
+    }
+
+
+
+
+    &-gettingstarted {
+        position: absolute;
+        top:0px;
+        left:0px;
+        z-index: 999999;
+        width: 100%;
+        height:100%;
+        background: rgba(0,0,0,0.46);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        &-body {
+            background: url('./img/gettingStarted.png') 0 0 no-repeat;
+            background-size: contain;
+            width: 800px;
+            height: 470px;
+        }
+
+        &-footer{
+            height: 48px;
+            display: flex;
+            align-items: center;
+        }
+
+        &-footer-btn{
+            background: url('./img/know.png') 0 0 no-repeat;
+            background-size: contain;
+            width: 120px;
+            height: 36px;
+            cursor: pointer;
+            &:hover{
+                background: url('./img/knowHover.png') 0 0 no-repeat;
+                background-size: contain;
+            }
+        }
+
+        .ant-checkbox-wrapper{
+            color: #fff;
+            margin-right: 8px;
+        }
+    }
+    .dzTitle {
+        font-size: 16px;
+        line-height: 57px;
+        text-indent: 12px;
+        cursor: pointer;
+    }
+    .dzTitle:hover {
+        color: #2db7f5;
+    }
+    .backBtn {
+        background: #fff;
+        border: 0;
+        margin-right: 30px;
+        line-height: 56px;
+        height: 56px;
+        font-size: 12px;
+        outline: none;
+        .rriconfont-shouye:before {
+            font-size: 30px;
+            position: relative;
+            top: 6px;
+        }
+        .rriconfont-revoke:before {
+            color: #666;
+            font-size: 30px;
+            position: relative;
+            top: 6px;        }
+    }
+    .backBtn:hover {
+        color: #3EABE8;
+        .rriconfont-shouye:before {
+            color: #3EABE8;
+        }
+        .rriconfont-revoke:before {
+            color: #3EABE8;
+        }
+        .rriconfont-message:before {
+            color: #3EABE8;
+        }
+    }
+    .backModalBtn {
+        background: #fff;
+        border: 0;
+        margin-right: 30px;
+        line-height: 56px;
+        height: 56px;
+        font-size: 12px;
+        outline: none;
+        .rriconfont-revoke:before {
+            color: #666;
+            font-size: 32px;
+            position: relative;
+            top: 6px;
+        }
+    }
+    .backModalBtn:hover {
+        color: #3EABE8;
+        .rriconfont-revoke:before {
+            color: #3EABE8;
+        }
+    }
+    .rriconfont-shouye:before,.rriconfont-message:before,.rriconfont-helpCenter:before, {
+        color: #666;
+        font-size: 32px;
+    }
+    .ant-tabs-nav-wrap .ant-tabs-nav-scroll .ant-tabs-nav .ant-tabs-tab:nth-child(2) div i {
+        display: none;
+    }
+    .tax-box-btn {
+        left: 0 !important;
+    }
+}
+.ant-menu-submenu-vertical > .ant-menu-submenu-title:after{
+    right: 10px !important;
+}
+//二级菜单hover时的背景颜色
+.portal-left .ant-menu-sub .ant-menu-item-active{
+    background:#3EABE8 !important;
+}
+//没有二级菜单的一级菜单hover时的背景颜色
+.portal-left .ant-menu-dark .ant-menu-item-active{
+    background:#374f62;
+    color:#fff;
+}
+//二级菜单默认时的背景颜色
+.portal-left .ant-menu-sub .ant-menu-item{
+    background:#374f62;
+}
+//去掉头像下面的小边框
+.ant-menu-horizontal > .ant-menu-submenu:hover,horizontal > .ant-menu-submenu-active{
+    border-bottom:none !important;
+}
+
+.portal+div{   //popover偶尔病发高度撑开屏幕的问题
+    height: 0;
+}
+/*@keyframes bigMovie{
+    0%{
+        right:-62px;
+    }
+    10%{
+        right:0;
+    }
+    90%{
+        right:0;
+    }
+    100%{
+        right:-62px;
+    }
+}
+@keyframes littleMovie{
+    0%{
+        right:0;
+    }
+    10%{
+        right:-30px;
+    }
+    90%{
+        right:-30px;
+    }
+    100%{
+        right:0;
+    }
+}*/
+body{
+    overflow:hidden;
+}

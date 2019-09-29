@@ -1,0 +1,40 @@
+@import '../../../assets/styles/custom.less';
+@qrCode-prefix-cls: qrCode;
+.@{qrCode-prefix-cls}
+{
+	text-align: center;
+	margin-bottom: 20px;
+	#qrCode {
+		position: relative;
+		img {
+			margin: 0 auto;
+			margin-top: 34px;
+			margin-bottom: 9px;
+			width: 180px !important;
+			height: 180px !important;
+		}
+		#codeico,#erCode{
+			position:absolute;//生成绝对定位的元素，相对于浏览器窗口进行定位。元素的位置通过 "left", "top", "right" 以及 "bottom"
+			z-index:9999999;
+			left: 105px;
+			top: 105px;
+		}
+		#codeico{
+			width:73px;
+			height:73px;
+            background:url('img/yj.png') no-repeat;
+        }
+		#erCode{
+			width:69px !important;
+			height:69px !important;
+		  	border:1px solid #9c9c9c;
+			border-radius: 5px;
+			background-color: #ffffff;
+		}
+	}
+}
+.weixin_popup_foot {
+	font-size: 14px;
+	height: 22px;
+	line-height: 22px;
+}

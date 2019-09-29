@@ -1,0 +1,88 @@
+.rc-table{
+	height:100%;
+	overflow: hidden;
+	color: #333;
+}
+
+.rc-table-hasSumLine {
+	.rc-table-content {
+		.rc-table-body {
+			.rc-table-tbody tr:last-child {
+				font-weight: 700;
+			}
+		}
+	}
+}
+
+.rc-table-header{
+	padding-bottom: 7px !important;
+	min-height: 30px !important;
+	height: auto;
+}
+.rc-table-content{
+	height: 100%;
+	overflow: hidden;
+}
+
+.rc-table-fixed-header{
+		.rc-table-content {
+				display:flex;
+				flex: 1;
+				flex-direction: column;
+
+			 .rc-table-header{
+			 		overflow-y: auto !important;   //解决滚动条样式问题
+			 		overflow-x:hidden !important;
+			 		margin-bottom: -8px !important;
+					.rc-table-fixed{
+						table-layout: fixed;  //解决npm update样式跑偏
+
+						.rc-table-thead {
+							 overflow: visible;
+							 tr th {
+									background-color: #3EABE8;
+									background-image: -webkit-linear-gradient(#3EABE8, #3EABE8);
+									color: #fff;
+									height: 31px;
+									font-size: 12px;
+									font-weight: normal;
+									text-align: center;
+							 }
+						}
+					}
+			 }
+			 .rc-table-body{
+					flex:1;
+					overflow-x: hidden !important;    //解决滚动条样式问题
+					overflow-y: auto !important;
+
+					.rc-table-fixed{
+						width:e('calc(100% + 9px)');    //解决滚动条样式问题
+						table-layout: fixed;
+					}
+
+					.rc-table-tbody {
+						> tr:hover {
+							background-color: #def9fc;
+						}
+						.z-grid-displaycell{
+							a:hover{
+								text-decoration: underline !important;
+							}
+						}
+					}
+			 }
+		}
+}
+// 兼容ie11上表格的表頭是白色的缺陷
+.z-grid .fixedDataTableLayout_rowsContainer .fixedDataTableRowLayout_rowWrapper .public_fixedDataTable_header{
+	background: #3EABE8;
+}
+// 解决火狐上表头与表行的错位
+@-moz-document url-prefix() { .rc-table-fixed-header .rc-table-content .rc-table-body .rc-table-fixed { width:e('calc(100% + 17px)'); } }
+.rc-table-tbody tr > td:last-child{ padding-right:20px !important; }
+// 解决ie上表头与表行的错位
+@hack:~"\9";
+.rc-table-fixed-header .rc-table-content .rc-table-body .rc-table-fixed {
+    width:e('calc(100% + 17px)')@hack;
+}

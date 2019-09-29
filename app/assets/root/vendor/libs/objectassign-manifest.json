@@ -1,0 +1,6 @@
+{
+  "name": "objectassign_lib",
+  "content": {
+    "./node_modules/object-assign/index.js": 814
+  }
+}

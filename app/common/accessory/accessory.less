@@ -1,0 +1,230 @@
+@import '../../../assets/styles/custom.less';
+@accessory-prefix-cls:accessory;
+.@{accessory-prefix-cls}
+{
+
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+	width: 100%;
+	height: 100%;
+//	position: absolute;
+	align-items: center;
+    
+    .accessory-picture {
+        height: 260px;
+        width: 100%;
+        
+        span {
+            display: block;
+            position: absolute;
+            z-index: 1;
+        }
+        
+        .z-form {
+            width: 100%;
+            height: 240px;
+            
+            .z-grid {
+                width: 100%;
+                height: 100%;
+                
+                .fixedDataTableLayout_rowsContainer > div:nth-child(2){
+                    display: none;
+                }
+                
+                .fixedDataTableRowLayout_rowWrapper{ 
+                    height: 100px !important;
+                }
+                
+                .fixedDataTableRowLayout_rowWrapper:nth-child(2) {   // pic样式调整
+                    transform: translate3d(0px, 100px, 0px) !important;
+                }
+                .fixedDataTableRowLayout_rowWrapper:nth-child(3) {
+                    display: none;
+                }
+                
+                .fixedDataTableRowLayout_rowWrapper:hover .public_fixedDataTableCell_main {
+                    background-color: #fff;
+                }
+                .fixedDataTableRowLayout_rowWrapper .public_fixedDataTableCell_main {
+                    background-color: #fff;
+                }
+            
+                .fixedDataTableRowLayout_main { 
+                    height: 100px !important;
+
+                    .fixedDataTableRowLayout_body {
+                        
+                        .fixedDataTableCellGroupLayout_cellGroupWrapper:nth-child(1) {
+                            display: none;
+                        }
+                        .fixedDataTableCellGroupLayout_cellGroupWrapper:nth-child(2) {
+
+                            .fixedDataTableCellGroupLayout_cellGroup {
+                                height: 100px !important;
+
+                                .fixedDataTableCellLayout_main {
+                                    height: 100px !important;
+
+                                    .picCell {
+                                        width: 200px;
+                                        height: 100px;
+                                        position: relative;
+                                        padding: 5px 10px;
+                                        
+                                        div {
+                                            display: table-cell;
+                                            width: 180px;
+                                            height: 90px;
+                                            vertical-align: middle;
+                                            text-align: center;
+                                        }
+
+                                        img {
+                                            max-height: 90px;
+                                            max-width: 180px;
+                                            cursor: pointer;
+                                        }
+                                        
+                                        span {
+                                            position: absolute;
+                                            top: 5px;
+                                            right: 10px;
+                                            cursor: pointer;
+                                            
+                                            .delPic::before {
+                                                font-family: "rriconfont" !important;
+                                                content: '\E621';
+                                                font-size: 22px;
+                                                font-style: normal;
+                                                float:left;
+                                                color:#EE752F;
+                                            }
+                                        }
+                                    }
+                                    
+                                    .addPics {
+                                        width: 200px;
+                                        height: 100px;
+                                        position: relative;
+                                        padding: 5px 10px;
+                                        display: block;
+                                        text-align: center;
+                                        
+                                        .addPic::before {
+                                            font-family: "rriconfont" !important;
+                                            content: '\E6df';
+                                            font-size: 88px;
+                                            font-style: normal;
+                                            float:left;
+                                            color:#57c5f7;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    .accessory-otherFiles {
+        height: 200px;
+        width: 100%;
+        
+        span {
+            
+        }
+        
+        .z-form {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            
+            .z-grid {
+                width: 100%;
+                height: 100%;
+                
+                .fixedDataTableLayout_topShadow, .fixedDataTableLayout_bottomShadow {
+                    display: none;
+                }
+
+                .fixedDataTableLayout_topShadow, .fixedDataTableLayout_bottomShadow {
+                    display: none;
+                }
+            }
+            
+            .z-formitems {
+                position: absolute;
+                bottom: -25px;
+                
+                .z-formitem {
+                    margin-bottom: 0;
+                }
+                
+                .ant-form-item-label {
+                    display: none;
+                }
+            }
+        }
+        
+        .ant-btn {
+            
+        }
+    }
+
+    .z-grid {
+        width: 100%;
+        height: 100%;
+        
+        div {
+            border: none;
+        }
+        
+        .public_fixedDataTable_header, .public_fixedDataTable_header .public_fixedDataTableCell_main {
+            background-color: #fff;
+            background-image: none;
+            color: #666;
+        }
+        
+        .public_fixedDataTableCell_cellContent {
+            text-align: left;
+        }
+
+        .spanOpt{
+            display: inline-block;
+            padding-top: 3px;
+            margin-left: 15px;
+            cursor: pointer;
+        }
+        
+        .downLoad::before {
+            font-family: "rriconfont" !important;
+            content: '\E64c';
+            font-size: 25px;
+            font-style: normal;
+            color: #EE752F;
+        }
+
+        .delete::before{
+            font-family: "rriconfont" !important;
+            content: '\E621';
+            font-size: 25px;
+            font-style: normal;
+            color: #EE752F;
+        }
+        .delete:hover:before{
+            color: #d52d00;
+        }
+    }
+}
+
+.showPics {
+    .ant-modal-footer {
+        button:first-child {
+            display: none;
+        }
+    }
+}

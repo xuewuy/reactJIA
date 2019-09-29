@@ -1,0 +1,46 @@
+export const meta = {
+	name:'root',
+	childrens:[{
+		name:'album',
+		bindField:'album'
+	}]
+}
+
+export const data = {
+	album:[{
+		fileName:'1',
+		fileUrl:'https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png'
+	},{
+		fileName:'2',
+		fileUrl:'https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png'
+	},{
+		fileName:'3',
+		fileUrl:'https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png'
+	},{
+		fileName:'4',
+		fileUrl:'https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png'
+	},{
+		fileName:'5',
+		fileUrl:'https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png'
+	},{
+		fileName:'6',
+		fileUrl:'https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png'
+	},{
+		fileName:'7',
+		fileUrl:'https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png'
+	},{
+		fileName:'8',
+		fileUrl:'https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png'
+	},{
+		fileName:'9',
+		fileUrl:'https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png'
+	},{
+		fileName:'10',
+		fileUrl:'https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png'
+	}],
+	current:{
+		fileName:'1',
+		fileUrl:'https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png'
+	},
+	slidePosition:0
+}

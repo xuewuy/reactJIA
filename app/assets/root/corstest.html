@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8">
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/jquery/jquery.md5.min.js"></script>
+</head>
+<body>
+<div>
+<div><span>用户名:</span><input type="text" id="mobile" /></div>
+<div><span>密码:</span><input type="password" id="pwd" /></div>
+</div>
+    <button onclick="dologin()">登录</button>
+    <button onclick="dologout()">注销</button>
+    <button onclick="readtoken()">读取token</button>
+    <button onclick="openIframe()">打开菜单</button>
+	<iframe id="ifr" style="display:none;width:100%;height:600px;"></iframe>
+</body>
+<script src="https://yj.rrtimes.com/cors.js"></script>
+<script>
+    function dologin() {
+		var token = "111111"
+		var args = {"account":"","password":"","domain":"yj.rrtimes.com"}
+		args.account = $("#mobile").val(); 
+		args.password = $.md5( $("#pwd").val()+'yiJia9*')
+		var url = "https://yj.rrtimes.com/v1/user/login"
+		var opts = {
+			method:"POST",   //请求方法
+			body:JSON.stringify(args),   //请求体
+	　　　　　headers: {
+	   　　　　 'Accept': 'application/json',
+	   　　　　 'Content-Type': 'application/json',
+	 　　　　 },
+		}
+		fetch(url,opts).then(res=>{  
+			res.json().then(result=>{
+				if(confirm(result.token))
+					rrUser.setToken(result.token)
+			 } )
+		})
+    }
+    function dologout() {
+        rrUser.clearToken()
+    }
+    function readtoken() {
+        rrUser.getToken(function(token){
+            alert(token)
+        }) 
+    }
+	function openIframe(){
+		var ifr = $("#ifr")[0];
+		ifr.src = "https://yj.rrtimes.com/index.html#apps/portal?target=apps/fi/accountBook/subsidiaryLedger"
+		ifr.style.display="block"
+		
+		initOpenTabBind();
+	}
+	function initOpenTabBind(){
+		if(!rrUser){
+			return;
+		}
+		
+        //onclick='window.parent.postMessage(JSON.stringify({ type: "OPENTAB", args:{type:"journal", id: 1000000000}}), "*")'
+		rrUser.onOpenTab = function(args){
+			alert('onOpenTab:'+JSON.stringify(args));
+		}
+	}
+</script>
+
+</html>

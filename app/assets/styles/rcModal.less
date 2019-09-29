@@ -1,0 +1,67 @@
+
+.ant-modal-wrap{
+	padding: 50px;;
+	 display: flex;
+   align-items: center;
+  justify-content: center;
+}
+
+.ant-modal-wrap .ant-modal {
+  top: 0;
+  margin:0;
+}
+
+.ant-modal-footer{
+    padding: 10px;
+    justify-content: center;
+    display: flex;
+    border:none !important;
+}
+.vertical-center-modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.vertical-center-modal .ant-modal {
+  top: 0;
+}
+.onlyOk{
+	.ant-modal-footer .ant-btn:first-child,.ant-confirm-btns .ant-btn:first-child{
+		display: none;
+	}
+}
+
+.ant-modal-title{
+  font-family: initial;
+}
+
+.ant-confirm-btns{
+  float: none !important;
+  text-align: center;
+}
+
+//用的地方较多的需要区别卡片和页签的样式  卡片modal需要添加的wrapClassName
+//1、新增人员  wrapClassName：personCardModal
+.personCardModal {
+	.ant-modal-body {
+		padding: 16px 16px 0;
+	}
+	.personcard {
+		.z-dynamicpage {
+			margin-top: 0px;
+			padding-left: 15px;
+		}
+	}
+}
+.modal-help-title{
+  padding-left: 8px;
+}
+
+.modal-help-title::before{
+  color:#39BBF6 !important;
+  font-weight: lighter;
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 21px;
+}

@@ -1,0 +1,6 @@
+{
+  "name": "classnames_lib",
+  "content": {
+    "./node_modules/classnames/index.js": 1
+  }
+}

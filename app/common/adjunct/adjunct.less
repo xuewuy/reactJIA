@@ -1,0 +1,367 @@
+@import '../../../assets/styles/custom.less';
+@adjunct-prefix-cls:adjunct;
+.@{adjunct-prefix-cls}
+{
+
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+	width: 100%;
+	height: 100%;
+//	position: absolute;
+	align-items: center;
+
+	&-isNone {
+	    position: absolute;
+	    width: 250px;
+	    z-index: 1;
+		left: 1px;
+
+		img {
+			width: 120px;
+			margin-left: 60px;
+			margin-top: 60px;
+		}
+
+		span {
+			display: block;
+			text-align: center;
+			margin-top: 20px;
+
+			i {
+				display: inline-block;
+				width: 38px;
+			}
+		}
+	}
+
+    .z-form {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        display: initial;
+
+        .z-grid {
+            width: 100%;
+            height: 232px;
+            flex: auto;
+
+            div {
+                border: none;
+            }
+
+            .public_fixedDataTableCell_main:first-child {
+                text-align: left !important;
+                padding-left: 3px;
+
+                span {
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+
+                    i {
+                        display: block;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        width: 160px;
+                        float: right;
+                        height: 100%;
+                        line-height: 40px;
+                        font-style: normal;
+                    }
+                }
+            }
+
+            .fixedDataTableLayout_rowsContainer > div:nth-child(3) {
+                .fixedDataTableRowLayout_rowWrapper:hover .public_fixedDataTableCell_main {
+                    background-color: #DEF9FC;
+                }
+
+                .fixedDataTableRowLayout_rowWrapper .fixedDataTableCellGroupLayout_cellGroup {
+                    border-bottom: 1px dashed #e5e6e6;
+                }
+            }
+
+
+            .public_fixedDataTableCell_main {
+                background-color: #fff;
+
+                .picture {
+                    line-height: 30px;
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    cursor: pointer;
+
+                    i {
+                        display: block;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        width: 160px;
+                        float: right;
+                        font-style: normal;
+                        color: #2db7f5;
+                    }
+                }
+                .picture::before{
+                    font-family: "rriconfont" !important;
+                    content: '\E684';
+                    font-size: 25px;
+                    font-style: normal;
+                    color: #CC00FF;
+                    display: inline-block;
+                    padding-top: 5px;
+                }
+                .ppt::before{
+                    font-family: "rriconfont" !important;
+                    content: '\E681';
+                    font-size: 25px;
+                    font-style: normal;
+                    color: #EB4A1B;
+                    display: inline-block;
+                    padding-top: 1px;
+                }
+                .pdf::before{
+                    font-family: "rriconfont" !important;
+                    content: '\E682';
+                    font-size: 25px;
+                    font-style: normal;
+                    color: #FB3939;
+                    display: inline-block;
+                    padding-top: 1px;
+                }
+                .word::before{
+                    font-family: "rriconfont" !important;
+                    content: '\E683';
+                    font-size: 25px;
+                    font-style: normal;
+                    color: #155DAE;
+                    display: inline-block;
+                    padding-top: 2px;
+                }
+                .exel::before{
+                    font-family: "rriconfont" !important;
+                    content: '\E685';
+                    font-size: 25px;
+                    font-style: normal;
+                    color: #009040;
+                    display: inline-block;
+                    padding-top: 1px;
+                }
+                .compress::before{
+                    font-family: "rriconfont" !important;
+                    content: '\E688';
+                    font-size: 25px;
+                    font-style: normal;
+                    color: #977153;
+                    display: inline-block;
+                    padding-top: 1px;
+                }
+                .unknown::before{
+                    font-family: "rriconfont" !important;
+                    content: '\E680';
+                    font-size: 25px;
+                    font-style: normal;
+                    color: #5DCA07;
+                    display: inline-block;
+                    padding-top: 1px;
+                }
+            }
+
+            .public_fixedDataTableCell_main {
+                text-align: center;
+
+                .public_fixedDataTableCell_main > div {
+                    text-align: center;
+                }
+            }
+
+            .public_fixedDataTableCell_main .z-grid-displaycell {
+                width: 100% !important;
+                padding: 0;
+                line-height: 30px;
+            }
+
+            .fixedDataTableLayout_topShadow, .fixedDataTableLayout_bottomShadow {
+                display: none;
+            }
+
+            .fixedDataTableLayout_topShadow, .fixedDataTableLayout_bottomShadow {
+                display: none;
+            }
+
+            .public_fixedDataTable_header, .public_fixedDataTable_header .public_fixedDataTableCell_main {
+                background-color: #fff;
+                background-image: none;
+                color: #666;
+                background-color: #e5e6e6;
+
+                .public_fixedDataTableCell_cellContent {
+                    text-align: right;
+                    padding-right: 40px;
+                }
+            }
+
+            .public_fixedDataTableCell_cellContent {
+                text-align: left;
+            }
+
+            .spanOpt{
+                display: inline-block;
+                padding-top: 9px;
+                cursor: pointer;
+            }
+
+            .downLoad::before {
+                font-family: "rriconfont" !important;
+                content: '\E64c';
+                font-size: 22px;
+                font-style: normal;
+                color: #EE752F;
+            }
+
+            .downLoad:hover:before {
+                color: #d52d00;
+            }
+
+            .delete::before{
+                font-family: "rriconfont" !important;
+                content: '\E621';
+                font-size: 22px;
+                font-style: normal;
+                color: #EE752F;
+            }
+            .delete:hover:before{
+                color: #d52d00;
+            }
+        }
+
+        .loadFiles {
+            margin-top: 0;
+            background-color: #FBFBFB;
+            border-top: solid 1px #e5e6e6;
+
+//            .ant-upload-list-item.ant-upload-list-item-done {
+//                margin-top: 0;
+//
+//                .ant-upload-list-item-info {
+//                    display: none;
+//                }
+//            }
+//            .ant-upload-list-item.ant-upload-list-item-uploading {
+////                margin-top: 0;
+//
+//                .ant-upload-list-item-info {
+//                    display: none;
+//                }
+//            }
+
+            .z-formitem {
+                margin-bottom: 0;
+                margin: 0 auto;
+
+                .ant-upload {
+
+                    a {
+                        display: block;
+                        padding-left: 22px;
+                        position: relative;
+
+                        i {
+                            position: absolute;
+                            top: 6px;
+                            left: 0;
+                        }
+                        i::before {
+                            color: #57c5f7
+                        }
+
+						b {
+							position: absolute;
+							top: -54px;
+							right: -22px;
+							font-weight: 400;
+							z-index: 1;
+						}
+						b:hover {
+							text-decoration: underline;
+						}
+						a {
+							padding-left: 0;
+						}
+						a:hover {
+							text-decoration: underline;
+						}
+                    }
+					a:active, a:hover {
+						text-decoration: none;
+					}
+                }
+            }
+
+            .ant-form-item-label {
+                display: none;
+            }
+        }
+    }
+    
+    &-onlyOne {
+        width: 250px;
+        height: 265px;
+        background-color: #fff;
+        display: flex;
+        flex-direction: column;
+        
+        .adjunct-img {
+            flex: 1;
+            justify-content: center;
+            align-items: center;
+            display: -webkit-flex;
+        }
+        
+        > span {
+            .onlyOneUpload {
+                display: block;
+                position: relative;
+                padding: 10px 0 5px 100px;
+
+                a {
+                    top: 11px;
+                    position: absolute;
+                }
+            }
+            .ant-upload.ant-upload-select {
+                display: block;
+                background-color: #e5e6e6;
+                
+                .reUpload {
+                    padding: 10px 0 5px 90px;
+                }
+            }
+        }
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+}
+.adjunct-isReadonly {
+    .z-form {
+        .z-formitems {
+            border-top: 0px;
+        }
+    }
+}

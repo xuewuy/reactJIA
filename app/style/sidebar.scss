@@ -1,0 +1,19 @@
+.sidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 150px;
+    background: #3d3c4a;
+    .title {
+        width: 90%;
+        margin: 0 5%;
+        height: 80px;
+        line-height: 80px;
+        color: #fff;
+        font-size: 20px;
+        text-align: center;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+}

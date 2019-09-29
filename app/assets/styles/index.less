@@ -1,0 +1,183 @@
+@import "~ziaochina-antd/dist/antd.less";
+
+@import "custom.less";
+
+@import "rcInput.less";
+
+@import "rcPopover.less";
+
+@import "rcCard.less";
+
+@import "rcTable.less";
+
+@import "rcModal.less";
+
+@import "fixedDataTable.less";
+
+@import "scrollbar.less";
+
+@import "dynamicUI.less";
+
+@import "rcSelect.less";
+
+@import "xTab.less";
+
+@import "xList.less";
+
+
+label{
+	font-weight:normal !important;
+}
+
+.viewer-toolbar {
+	width: 250px;
+
+	.viewer-play {  //隐藏图片查看的播放按钮
+		display: none;
+	}
+}
+
+.ant-btn{
+    border-radius: 2px;
+}
+
+.ant-tabs{
+	color: #333;
+}
+.ant-table{
+	color: #333;
+}
+.ant-calendar-picker-clear{  //用于日期控件的清除按钮的隐藏
+    display: none;
+}
+
+.ant-input-number-handler-wrap{
+	display: none;
+}
+
+.z-pagination {
+	padding-right: 60px !important;
+	position: relative;
+
+	>.ant-btn {
+		position: absolute;
+	    right: 0;
+		top: 10px;
+	    width: 50px;
+	    padding: 4px;
+	    background-color: #fff;
+		border: 1px solid #d9d9d9 !important;
+	}
+}
+input::-webkit-input-placeholder {
+    color: #999 !important;
+}
+input:-moz-placeholder {
+    color: #999 !important;
+}
+input:-ms-input-placeholder {
+    color: #999 !important;
+}
+.ant-pagination-options-quick-jumper input {
+	border-radius: 2px !important;
+	text-align: center;
+}
+
+.ant-pagination-options .ant-select-selection-selected-value{
+	width: 75px !important
+}
+
+.ant-calendar-decade-panel-decade{
+	white-space:nowrap !important
+}
+// 下拉dropdown  disable状态去border
+.emptyMenu{
+    visibility: hidden !important;
+}
+
+//树形结构的对齐统一调整
+.ant-tree .z-tree-leaf {
+	margin-left: -18px;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+.ant-cascader-menu{
+	height: 260px !important;
+}
+.helpStyle{
+	padding: 6px 0 0 8px;
+    position: absolute;
+    right: -25px;
+    z-index: 1049;
+}
+
+.helpStyle::before{
+	color:#39BBF6 !important;
+}
+
+.helpChkStyle{
+	padding: 8px 0 0 8px;
+    position: absolute;
+    /* right: -30px; */
+    z-index: 1049;
+    left: 0;
+    margin-left: 12px;
+    margin-top: -12px;
+}
+
+.helpChkStyle::before{
+	color:#39BBF6 !important;
+}
+/*imageViwer图片查看样式优化*/
+.viewer-container {
+	background-color: rgba(0,0,0,0.7);
+	.viewer-button {
+	    top: 0;
+	    right: 0;
+	    width: 100px;
+	    height: 100px;
+	    border-radius: 0;	
+	    background-color: #000;
+	}
+	.viewer-button:before {
+		background-image: none;
+	    background-image: none;
+	    font-family: "rriconfont" !important;
+	    content: '\E6dd';
+	    font-size: 50px;
+	    font-style: normal;
+	    float: left;
+	    color: #fff;
+        bottom: 31px;
+    	left: 27px;
+	}
+}
+/*
+设置整个portal页弹窗modal蒙层的层级
+左侧菜单的层级为1051
+右侧每个模块内容的层级为1050
+整个弹窗的层级为1080
+*/
+// .ant-modal{
+//     &-mask,&-wrap{
+//         z-index: 1080;
+//     }
+// }
+// #app{
+//     &>div>div>.ant-select-dropdown{
+//         z-index: 1080;
+//     }
+// }
+// //所有的消息弹窗的层级设置再最顶级！必须比modal的高
+// body > div > .ant-message{
+// 	z-index:1081 !important;
+// }
+// .ant-popover{
+// 	// z-index: 1081 !important;
+// }
+// body>div>div> .ant-select-dropdown--single{
+// 	z-index: 1080 !important;
+// }
+

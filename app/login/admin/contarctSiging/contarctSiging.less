@@ -1,0 +1,30 @@
+@import '../../../../assets/styles/custom.less';
+
+@contarctSiging-prefix-cls: contarctSiging;
+.@{contarctSiging-prefix-cls} {
+    
+    .has-feedback {
+      position: absolute;
+      width: 30px;
+      height: 30px;
+      right: 0;
+      top: 0px;
+    }
+
+    &-body{
+        .z-formitems{
+            .z-formitem{
+                display:flex;
+                justify-content: center;
+                align-items:center;
+            }
+            .ant-form-item{
+                margin-bottom: 0;
+            }
+            label{
+                width: 220px;
+                text-align: right;
+            }
+        }
+    }
+}

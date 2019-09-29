@@ -1,0 +1,6 @@
+{
+  "name": "immutable_lib",
+  "content": {
+    "./node_modules/immutable/dist/immutable.js": 696
+  }
+}

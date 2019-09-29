@@ -1,0 +1,7 @@
+{
+  "name": "es6promise_lib",
+  "content": {
+    "./node_modules/process/browser.js": 680,
+    "./node_modules/es6-promise/dist/es6-promise.js": 694
+  }
+}

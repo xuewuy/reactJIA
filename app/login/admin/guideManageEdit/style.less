@@ -1,0 +1,25 @@
+@import '../../../../assets/styles/custom.less';
+@admin-prefix-cls: guideManageEdit;
+.@{admin-prefix-cls}
+{
+	&-head {
+		padding: 10px 0 10px;
+	}
+	
+	&-clear {
+		margin-buttom: -16px;
+	}
+	&-clearTitle {
+		padding: 10px 0;
+	}
+    &-clearValue {
+        margin-bottom: -12px;
+        word-break: break-all;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 5;
+        overflow: auto;
+        padding: 0 5px;
+    }
+}

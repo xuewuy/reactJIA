@@ -1,0 +1,65 @@
+@import '../../../../assets/styles/custom.less';
+@weChatPay-prefix-cls: weChatPay;
+.@{weChatPay-prefix-cls}
+{
+    display: flex;
+    flex:1;
+    height: 100%;
+    width: 100%;
+    padding: 25px 0 10px 0;
+    flex-direction: column;
+    &-order{
+        text-align:center;
+        div{
+            color: #454545;
+            font-size: 14px;
+            margin: 31px 0 23px;
+        }
+        span{
+            font-size: 16px;
+            color: #f60;
+            cursor: pointer;
+        }
+        p{
+            font-size: 12px;
+            color: #999;
+            margin-bottom: 21px;
+        }
+        .qrCodeNone{
+            display:none;
+        }
+        .WeChatQrCode{
+            opacity: 0.4;
+        }
+        #qrCode img[alt="Scan me!"]{
+            display:block !important;
+        }
+        img[alt="Scan me!"]{
+            display:none !important;
+        }
+    }
+    .ant-modal-header{
+        padding: 10px 16px;
+        background: #3EABE8;
+        color:#fff;
+        border-bottom:0;
+        font-size:14px;
+    }
+    .ant-modal-close-x:before{
+        color:#fff;
+    }
+    .ant-btn-ghost{
+        display:none;
+    }
+    .ant-btn-primary{
+        display:none;
+    }
+    .ant-modal-footer{
+        padding: 10px 0 25px;
+    }
+    #qrCode {
+        img {
+            margin: 0 auto;
+        }
+    }
+}

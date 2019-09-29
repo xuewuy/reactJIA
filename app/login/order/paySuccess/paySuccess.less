@@ -1,0 +1,40 @@
+@import '../../../../assets/styles/custom.less';
+@paySuccess-prefix-cls: paySuccess;
+.@{paySuccess-prefix-cls}
+{
+    display: flex;
+    flex:1;
+    height: 100%;
+    width: 100%;
+    padding: 25px 0 10px 0;
+    flex-direction: column;
+    &-content{
+        text-align:center;
+        div{
+            color: #47c700;
+            font-size: 18px;
+            margin: 11px 0 20px;
+        }
+        span{
+            font-size: 14px;
+            color: #74C2EE;
+        }
+        p{
+            font-size: 14px;
+            color: #454545;
+            margin-bottom: 16px;
+        }
+    }
+    .ant-modal-header{
+       border:0;
+    }
+    .ant-modal-title {
+        display: none;
+    }
+    .ant-btn-ghost{
+        display:none;
+    }
+    .ant-modal-footer{
+        padding: 10px 0 25px;
+    }
+}

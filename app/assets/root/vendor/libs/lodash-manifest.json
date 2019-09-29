@@ -1,0 +1,7 @@
+{
+  "name": "lodash_lib",
+  "content": {
+    "./node_modules/lodash/lodash.js": 698,
+    "./node_modules/webpack/buildin/module.js": 699
+  }
+}

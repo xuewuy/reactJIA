@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+
+<body>
+</body>
+<script>  
+    (function (doc, win) {
+        var fn = {
+            /*数据存储*/
+            setLocalData: function (k, v) {
+                sessionStorage.setItem(k, v)
+            },
+            getLocalData: function (k) {
+                return sessionStorage.getItem(k)
+            },
+            clearLocalData: function (k) {
+                sessionStorage.removeItem(k)
+            },
+            init: function () {
+                this.bindEvent();
+            },
+            checkOrigin: function (origin) {
+                var domain = [".rrtimes.com",".beescm.cn",".newbeescm.com"]
+                var originDomain = origin.split('//')[1].split(':')[0]
+				for(var i=0;i<domain.length;i++){
+					if (originDomain.indexOf(domain[i])!=-1){
+						return true
+					}
+				} 
+                return false
+            },
+            bindEvent: function () {
+                var tokenKey = "_accessToken"
+                win.addEventListener("message", function (evt) {
+                    if (win.parent != evt.source) { return }
+                    if (!fn.checkOrigin(evt.origin)) { return }
+                    var data = JSON.parse(evt.data)
+                    var type = data.type;
+                    if (type == "GETTOKEN") {
+                        var token = fn.getLocalData(tokenKey);
+                        win.parent.postMessage(JSON.stringify({ type: "GETTOKEN", token: token, key: data.key }), "*");
+                    } else if (type == "SETTOKEN") {
+                        var token = data.token;
+                        fn.setLocalData(tokenKey, token)
+                    } else if (type == "REMTOKEN") {
+                        fn.clearLocalData(tokenKey);
+                    }
+                }, false)
+            }
+        };
+        fn.init();
+    })(document, window);
+</script>
+
+</html>

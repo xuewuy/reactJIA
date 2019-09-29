@@ -1,0 +1,33 @@
+@coding-prefix-cls: coding;
+.@{coding-prefix-cls} {
+    display:flex;
+    flex:1;
+    justify-content: center;
+    align-items:center;
+    flex-direction:column;
+    border-radius:2px;
+    margin:10px;
+    border:1px solid #E1E1E1;
+    background:#fff;
+    overflow-y: auto;
+    &-warp{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-height: 480px;
+        img:nth-child(2){
+            margin: 10px 0;
+        }
+        img:nth-child(3){
+            margin: 10px 0;
+        }
+        p{
+            font-family: "微软雅黑";
+            font-size: 18px;
+            line-height: 18px;
+            color: #189CF6;
+            text-align: center;
+            padding: 10px 0;
+        }
+    }
+}

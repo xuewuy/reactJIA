@@ -20,7 +20,7 @@
     "immutable": "3.8.1",
     "isomorphic-fetch": "2.2.1",
     "md5": "2.2.1",
-    "moment": "2.18.1",
+    "moment": "2.24.0",
     "object-assign": "4.1.0",
     "omit": "1.0.1",
     "rc-table": "5.2.10",

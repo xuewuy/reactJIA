@@ -8,7 +8,7 @@ export default class RootComponent extends React.Component{
 
 		this.handleRedirect =this.handleRedirect.bind(this)
 		let appPath = document.location.hash.replace("#","") || document.location.pathname || ""
-
+debugger
 		if(appPath.indexOf("app/")==0){
 			if(appPath[appPath.length-1]=="/") appPath = appPath.substring(0,appPath.length-1)
 			this.props.setCurrentAppPath(appPath, {})

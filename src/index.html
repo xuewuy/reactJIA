@@ -43,43 +43,4 @@
     <script src="vendor/libs/index.js"></script>
     <script src="vendor/imageViewer/viewer.min.js"></script>
 </body>
-<script>
-    window._hmt = window._hmt || [];
-    window._vds = window._vds || [];
-    (function () {
-        //百度统计
-        if (location.hostname.indexOf("www.rrtimes.com") != -1 || location.hostname.indexOf("yj.rrtimes.com") != -1) {
-            var hm = document.createElement("script");
-            hm.src = "https://hm.baidu.com/hm.js?cdaf4bd2fb3de749d0971dfdcc456f59";
-            var s = document.getElementsByTagName("script")[0];
-            s.parentNode.insertBefore(hm, s);
-        } else if (location.hostname.indexOf("test.rrtimes.com") != -1) {
-            var hm = document.createElement("script");
-            hm.src = "https://hm.baidu.com/hm.js?be2ca3d4fe3a840e4bea80b88de9fc20";
-            var s = document.getElementsByTagName("script")[0];
-            s.parentNode.insertBefore(hm, s);
-        } else if (location.hostname.indexOf("zhwuji.rrtimes.com") == 0 || location.hostname.indexOf("cs.zhwuji.com") == 0) {
-            window._vds.push(['setAccountId', 'bac635630853b5d5']);
-            var vds = document.createElement('script');
-            vds.type = 'text/javascript';
-            vds.async = true;
-            vds.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'dn-growing.qbox.me/vds.js';
-            var s = document.getElementsByTagName('script')[0];
-            s.parentNode.insertBefore(vds, s);
-        } else {
-            window._hmt = {
-                data: [], push: function (a) {
-                    this.data.push(a);
-                    if (this.data.length > 100) {
-                        this.data = [];
-                    }
-                }
-            }
-        }
-    })();
-
-</script> 
-<script src="https://user.rrtimes.com/cors.js"></script>
-<script type='text/javascript' src='https://webchat.7moor.com/javascripts/7moorInit.js?accessId=72c217f0-c514-11e7-970f-e53054ecf791&autoShow=false' async='async'></script>
-
 </html>

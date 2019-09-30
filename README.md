@@ -1,7 +1,7 @@
 ﻿##运行步骤
 * 1、npm install
 * 2、npm run start
-* 3、http://127.0.0.1:8081 
+* 3、http://127.0.0.1:8888 
 
 ##开发模式与线上环境运行区别
 * 开发模式 webpack 的NODE_ENV=developer或空，在打包后，会暴露更多的问题，开发模式下建议不指定的NODE_ENV

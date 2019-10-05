@@ -28,9 +28,6 @@ module.exports = {
             /node_modules\/lodash\//,
 
         ],
-        // noParse: ["jquery", "underscore","moment","immutable","lodash"].map(function(name) {
-        //     return path.join(__dirname, "node_modules", name); 
-        // }),
         loaders: [
             {
                 test: /\.(js|jsx)$/,
@@ -86,12 +83,6 @@ module.exports = {
             antd: path.resolve(projectRootPath, './node_modules/ziaochina-antd'),
             'echarts-for-react': path.resolve(projectRootPath, './node_modules/echarts-for-react'),
             'constant':path.resolve(projectRootPath,'./src/constant.js')
-            //'ReactDOM':path.resolve(projectRootPath, './node_modules/react-dom/dist/react-dom.min.js'),
-            //moment: "moment/min/moment-with-locales.min.js"
-            //jquery: __dirname + '/src/vendor/jquery/jquery.min.js',
-            //"jquery.md5": __dirname + '/src/vendor/jquery/jquery.md5.min.js',
-            //bootstrap: __dirname + '/src/vendor/bootstrap/js/bootstrap.min.js',
-            //tplus: __dirname + '/src/vendor/tplus/tplusUtil.js'
         },
         modulesDirectories: ['node_modules'],
         fallback: path.resolve(projectRootPath, './node_modules'),
@@ -103,26 +94,6 @@ module.exports = {
         contentBase: './dist/',
         hot: true,
         proxy: {
-            /*
-            '/tplus/ajaxpro/*': 'http://127.0.0.1:8080/',
-            '/tplus/CheckCode.aspx': 'http://127.0.0.1:8080/',
-            '/tplus/BAPView/*': 'http://127.0.0.1:8080/',
-            '/tplus/UserFiles/*': 'http://127.0.0.1:8080/',
-            '/tplus/js/*': 'http://127.0.0.1:8080/',
-            '/tplus/App_Themes/*': 'http://127.0.0.1:8080/',
-            '/tplus/CommonPage/*': 'http://127.0.0.1:8080/',
-            '/tplus/UFControls/*': 'http://127.0.0.1:8080/',
-            '/tplus/v/*': 'http://127.0.0.1:8080/',
-            '/tplus/app/*': 'http://127.0.0.1:8080/',
-
-            '/rap-user/*' : 'http://192.168.0.119:8086/',
-            '/rapuser/*' : 'http://101.201.55.207/',
-            '/v1/*' : 'http://192.168.1.202/',
-            // '/v1/*' : 'http://192.168.1.21:8086/',
-            // '/v1/*' : 'http://192.168.10.195:8086/',
-            '/tplus/*': 'http://192.168.1.202/'
-            // '/v1/*' : 'http://192.168.0.117:8086/'
-            */
         }
     },
 
@@ -162,15 +133,7 @@ module.exports = {
         //这个插件根据包/库的引用次数 来优化它们
         new webpack.optimize.OccurenceOrderPlugin(),
         new webpack.HotModuleReplacementPlugin(),
-         // 这个插件用来阻止Webpack把过小的文件打成单独的包
-        //new webpack.optimize.MinChunkSizePlugin({
-        //  minChunkSize: 51200, // ~50kb????
-        //}),
         new webpack.NoErrorsPlugin(),
-        //new webpack.optimize.CommonsChunkPlugin(names'bundle', 'main.bundle.js'),
-        //new webpack.optimize.CommonsChunkPlugin('vendor', 'vendor.bundle.js'),
-        //new webpack.optimize.CommonsChunkPlugin('shared', 'shared.bundle.js'),
-        //ProvidePlugin的作用就是在开发代码内不需要require('react')或import ... from ... 也能使用React
         new webpack.ProvidePlugin({
             'fetch': 'imports?this=>global!exports?global.fetch!whatwg-fetch'
         }),
@@ -191,7 +154,7 @@ module.exports = {
         }), 
         //使用302机制将main.boundle.js 跳转到生成后的文件
         new HtmlWebpackPlugin({
-            title: '智能财税平台', //标题
+            title: '薛武英', //标题
             favicon: './src/assets/img/favicon.ico', //favicon路径
             filename: './index.html', //生成的html存放路径，相对于 path
             template: './src/index-release.html', //html模板路径

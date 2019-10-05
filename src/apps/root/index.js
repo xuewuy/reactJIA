@@ -16,6 +16,8 @@ debugger
 			if(sessionStorage["root/logined"]=="1"){
 				this.handleLoginSuccess('app/portal', true);
 			}else{
+				console.log('走了登录页');
+				
 				this.props.setCurrentAppPath('app/login/login', {}) //转登录页
 			}
 		}
@@ -94,7 +96,7 @@ debugger
 
 
 		//App按path隔离的state在this.props.payload中获取
-		let currentAppPath = this.props.payload.get('currentAppPath') || 'apps/login/landing',
+		let currentAppPath = this.props.payload.get('currentAppPath') || 'apps/login/login',
 			currentAppProps = this.props.payload.get('currentAppProps') || {}
 			debugger
 		// apps/portal

@@ -9,22 +9,22 @@ export default class RootComponent extends React.Component{
 		this.handleRedirect =this.handleRedirect.bind(this)
 		let appPath = document.location.hash.replace("#","") || document.location.pathname || ""
 debugger
-		if(appPath.indexOf("app/")==0){
+		if(appPath.indexOf("apps/")==0){
 			if(appPath[appPath.length-1]=="/") appPath = appPath.substring(0,appPath.length-1)
 			this.props.setCurrentAppPath(appPath, {})
 		}else{
 			if(sessionStorage["root/logined"]=="1"){
-				this.handleLoginSuccess('app/portal', true);
+				this.handleLoginSuccess('apps/portal', true);
 			}else{
 				console.log('走了登录页');
 				
-				this.props.setCurrentAppPath('app/login/login', {}) //转登录页
+				this.props.setCurrentAppPath('apps/login/login', {}) //转登录页
 			}
 		}
 
 		let that = this
 		PubSub.subscribe('redirect',function(msg, data){
-			if(data.path=="app/login/login"){
+			if(data.path=="apps/login/login"){
 				that.handleLogoutSucess()
 				if(data.version){
 					window.localStorage["version"] = data.version;
@@ -35,7 +35,7 @@ debugger
 
 		window.onhashchange = function(){
 			let hash = document.location.hash || ''
-			if(hash.indexOf("app/")==-1)return;
+			if(hash.indexOf("apps/")==-1)return;
 			if(hash.indexOf('fromAction') == -1){
 				that.props.setCurrentAppPath(hash.substr(1), {})
 			}else{
@@ -62,7 +62,7 @@ debugger
 		this.props.clearAccessToken();
         if(onlineServiceUrl) return location=onlineServiceUrl
 
-        let path ='app/login/login?fromAction=false'
+        let path ='apps/login/login?fromAction=false'
         if(location.hash.split('?')[1]) {
            path += '&' + location.hash.split('?')[1]
         }
@@ -72,21 +72,6 @@ debugger
 	handleRedirect(appPath, props){
 		if(props===true){
 			location.hash = appPath
-			let version = window.localStorage["version"];
-			if(version && location.search.indexOf(version)==-1){
-				// location.search = "?v=" + version
-				// if(location.search.indexOf('h=dz')!=-1) {//为了防止服务商跳转注册时将地址参数h=dz去掉
-				/*
-				
-				//应用302技术将main.js转到最新的main.xxxx.js上去，而不再用?v=xxxx的方式跳过浏览器缓存 lsg
-
-				if(location.search.indexOf('h=')!=-1) {//为了防止服务商跳转注册时将地址参数h=dz去掉
-					location.search = location.search + "&v=" + version					
-				} else {
-					location.search = "?v=" + version					
-				}
-				*/
-			}
 		}else{
 			this.props.setCurrentAppPath(appPath, props)
 		}
@@ -98,10 +83,9 @@ debugger
 		//App按path隔离的state在this.props.payload中获取
 		let currentAppPath = this.props.payload.get('currentAppPath') || 'apps/login/login',
 			currentAppProps = this.props.payload.get('currentAppProps') || {}
-			debugger
-		// apps/portal
-		// ref={currentAppPath}
-		// path={currentAppPath}
+		console.log(currentAppPath);
+		console.log(currentAppProps);
+		
 		return (
 			<AppLoader
 				ref={currentAppPath}

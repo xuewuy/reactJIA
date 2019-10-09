@@ -19,20 +19,9 @@ export default class LoginNewComponent extends Component {
 
     componentDidMount() {
         debugger
+        console.log(this.props.user);
         this.props.initView(this.props.user, this.props.appParams['fromAction'], data => {
-            // debugger
-            // if (data.result) {
-            //     if(location.hash.indexOf('middle=true') != -1) {
-            //         this.props.onLoginSuccess('apps/login/orderSwy?middle=true', true)
-            //     }else if(location.hash.indexOf('high=true') != -1) {
-            //         this.props.onLoginSuccess('apps/login/orderSwy?high=true', true)
-            //     } else if (!!data.currentOrg && data.entrance === 2) {
-            //         this.props.onLoginSuccess('apps/portal', true)
-            //     }
-            //     else
-            //         this.props.onLoginSuccess('apps/login/admin', true)
-            // }
-        })
+       })
     }
 
     shouldComponentUpdate(nextProps) {
@@ -48,24 +37,6 @@ export default class LoginNewComponent extends Component {
             if (data.result) {
                     localStorage["currentUserName"] = data.currentUser.name
                     this.props.onLoginSuccess('apps/portal', true)
- 
-                // if(window.location.href.indexOf('farenw')!=-1){
-                //     let utils = this.props.payload.get('utils'),
-                //         getterByField = utils.get('getterByField'),
-                //         appInfo = getterByField('appInfo'),
-                //         homeUrl = window.location.origin,
-                //         mainUrl = homeUrl.split('farenw')[0],
-                //         endChars = mainUrl.charAt(mainUrl.length-1),
-                //         gwUrl = endChars=='/'?mainUrl+'farenw.html':mainUrl+'/farenw.html'
-
-                //     if(homeUrl){
-                //         gwUrl = window.location.protocol+'//'+window.location.host+'/farenw.html'
-				// 		window.name = '_accessToken=' + sessionStorage['_accessToken']
-                //     }
-                //     window.location.href=gwUrl;
-                // } else
-
-                
             }
         })
     }
@@ -73,8 +44,6 @@ export default class LoginNewComponent extends Component {
     handleRegisterClick() {
         let {prefixCls, ...otherProps} = this.props,
             getterByField = this.props.payload.getIn(['utils', 'getterByField'])
-        
-        // this.props.onRedirect('apps/login/clientRegister', true)
     }
 
     handleForgetClick() {
@@ -83,7 +52,6 @@ export default class LoginNewComponent extends Component {
         if(user){
             user = "?user=" + user
         }
-        // this.props.onRedirect('apps/login/forgetPassword' + user, true)
     }
 
     getComponentInstances() {

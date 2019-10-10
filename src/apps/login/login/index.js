@@ -4,7 +4,6 @@ import {HCFLayout, Button, MobileCaptcha, Icon, CountDownButton} from 'xComponen
 import DynamicComponent, {Link} from 'dynamicComponent'
 import styles from "./login.less"
 import qrcode from '../../common/qrCode/qrcode.js'
-import Zhwuji from './component/zhwujiLogin'
 
 
 export default class LoginNewComponent extends Component {
@@ -18,7 +17,6 @@ export default class LoginNewComponent extends Component {
     }
 
     componentDidMount() {
-        debugger
         console.log(this.props.user);
         this.props.initView(this.props.user, this.props.appParams['fromAction'], data => {
        })
@@ -33,7 +31,6 @@ export default class LoginNewComponent extends Component {
         if (message) return
 
         this.props.login(data => {
-            debugger
             if (data.result) {
                     localStorage["currentUserName"] = data.currentUser.name
                     this.props.onLoginSuccess('apps/portal', true)
@@ -67,14 +64,15 @@ export default class LoginNewComponent extends Component {
     }
 
     render() {
-        if (this.props._isCurrentTab === false) return null //加上这句话
+        console.log(this.props.payload)
+        console.log(this.props.payload.getIn(['global', 'message']))
         if (!this.props.payload || !this.props.payload.get('utils'))
-            return (<div></div>)
+            return (<div style={{width:'100%',lineHeight: '100px',textAlign: 'center',fontSize: '20px'}}>抱歉，没有获取到数据</div>)
 
         let {prefixCls, ...otherProps} = this.props,
             getterByField = this.props.payload.getIn(['utils', 'getterByField']),
-            userAgent = window.navigator.userAgent,
-            isContinueBrowsing = getterByField('isContinueBrowsing')
+            userAgent = window.navigator.userAgent
+        //  let sContinueBrowsing = getterByField('isContinueBrowsing')
         if(userAgent.match(/AppleWebKit.*Mobile.*/) && window.outerWidth < 768 && !isContinueBrowsing){
             return (
                 <div style={{display:'flex',flexDirection: 'column',alignItems: 'center',justifyContent: 'center',height: '100%'}}>
@@ -89,18 +87,8 @@ export default class LoginNewComponent extends Component {
             )
         }
         return (
-            <HCFLayout
-                main={this.renderYj(prefixCls, otherProps)}
-                {...otherProps}
-            />
-        )
-    }
-
-    renderYj(prefixCls, otherProps) {
-        let message = this.props.payload.getIn(['global', 'message']),
-            getterByField = this.props.payload.getIn(['utils', 'getterByField'])
-        return (
             <div className={prefixCls}>
+                {/* <img src={require('./img/bg1.jpg')} className={prefixCls + 'Img'} /> */}
                 <div className={prefixCls + '-content'}>
                     <h2 className={`${prefixCls}-header`}>登录</h2>
                     <DynamicComponent
@@ -110,18 +98,15 @@ export default class LoginNewComponent extends Component {
                         {...otherProps}
                     ></DynamicComponent>
                     <Button
-                        isDefaultEnterButton={!message}
                         ref='loginBtn'
                         type="primary"
                         className={`${prefixCls}-btn`}
                         onClick={::this.handleLoginClick}>
                         登录
                     </Button>
-                    <p>客户服务咨询：'400-6060386'</p>
+                    <p>薛武英制作</p>
                 </div>
             </div>
-
         )
     }
-
 }

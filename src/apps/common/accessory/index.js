@@ -115,7 +115,6 @@ export default class basicFiles extends Component {
 
 	handleEvent(eventName, option){
 		if(eventName == 'onPicturePreview'){
-			debugger
 			setTimeout(()=>{
 				let picDom = $('#' + option.id),
 				picsDom = $('.imageViewer')

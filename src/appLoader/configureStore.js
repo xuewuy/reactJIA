@@ -4,7 +4,7 @@ import promise from 'redux-promise'
 import { createStore, applyMiddleware, compose } from 'redux' // 引入redux createStore、中间件及compose 
 import DevTools from './DevTools' // 引入DevTools调试组件
 
-import apps from '../app'
+import apps from '../apps'
 import { appMiddleware } from 'appLoader'
 import * as contextUtil from '../context'
 import { fetchWrapper } from '../utils'

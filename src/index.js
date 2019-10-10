@@ -17,11 +17,14 @@ import 'babel-polyfill'
 import moment from 'moment'
 
 
+//const middleware = [appMiddleware(apps, {...fetchWrapper,...contextUtil }, {...contextUtil}),logger()]
 const middleware = [appMiddleware(apps, {...fetchWrapper,...contextUtil,...environmenttUtil }, {...contextUtil})]
 
 const store = createStore(reducer, Map(), applyMiddleware(...middleware))
 
+
 promise.polyfill()
+
 
 render(
 	<Provider store ={store}>

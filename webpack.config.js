@@ -30,6 +30,9 @@ module.exports = {
             // /node_modules\/lodash\//,
 
         ],
+        // noParse: ["jquery", "underscore","moment","immutable","lodash"].map(function(name) {
+        //     return path.join(__dirname, "node_modules", name);
+        // }),
         loaders: [
             {
                 test: /\.(js|jsx)$/,
@@ -91,6 +94,7 @@ module.exports = {
             antd: path.resolve(projectRootPath, './node_modules/ziaochina-antd'),
             'echarts-for-react': path.resolve(projectRootPath, './node_modules/echarts-for-react'),
             'constant':path.resolve(projectRootPath,'./src/constant.js')
+
         },
         modulesDirectories: ['node_modules'],
         fallback: path.resolve(projectRootPath, './node_modules'),
@@ -101,8 +105,18 @@ module.exports = {
     devServer: {
         contentBase: './dist/',
         hot: true,
-        historyApiFallback: true,
-        inline:true,
+        proxy: {
+
+            // '/rap-user/*': 'http://192.168.0.119:8086/',
+            // '/rapuser/*': 'http://101.201.55.207/',
+            // '/v1/*': 'http://debug.rrtimes.com:8089/',	//test
+            // '/v1/*': {
+            //     target: 'http://debug.rrtimes.com',//'http://192.168.2.38:8086',
+            //     // target: 'http://192.168.2.13:8086',//'http://192.168.2.38:8086',
+            //     // target: 'http://192.168.3.183',//'http://192.168.2.38:8086',
+            //     changeOrigin: true
+            // }	
+        },
         disableHostCheck: true
     },
 
@@ -142,7 +156,15 @@ module.exports = {
         //这个插件根据包/库的引用次数 来优化它们
         new webpack.optimize.OccurenceOrderPlugin(),
         new webpack.HotModuleReplacementPlugin(),
+        // 这个插件用来阻止Webpack把过小的文件打成单独的包
+        //new webpack.optimize.MinChunkSizePlugin({
+        //  minChunkSize: 51200, // ~50kb????
+        //}),
         new webpack.NoErrorsPlugin(),
+        //new webpack.optimize.CommonsChunkPlugin(names'bundle', 'main.bundle.js'),
+        //new webpack.optimize.CommonsChunkPlugin('vendor', 'vendor.bundle.js'),
+        //new webpack.optimize.CommonsChunkPlugin('shared', 'shared.bundle.js'),
+        //ProvidePlugin的作用就是在开发代码内不需要require('react')或import ... from ... 也能使用React
         new webpack.ProvidePlugin({
             'fetch': 'imports?this=>global!exports?global.fetch!whatwg-fetch'
         }),
@@ -153,8 +175,20 @@ module.exports = {
             // },
             'process.env.NODE_ENV':JSON.stringify('production'),
         }),
+
+        //代码丑化=webpack -p
+        // new webpack.optimize.UglifyJsPlugin({
+        //     minimize: true,
+        //     sourceMap:false,
+        //     mangle:false,
+        //     compressor: {
+        //         drop_debugger: true,
+        //         warnings: false,
+        //         drop_console: true
+        //     }
+        // }),
         new HtmlWebpackPlugin({
-            title: 'xuewuying', //标题
+            title: '薛武英', //标题
             favicon: './src/assets/img/favicon.ico', //favicon路径
             filename: './index.html', //生成的html存放路径，相对于 path
             template: './src/index.html', //html模板路径
@@ -177,6 +211,10 @@ module.exports = {
             context: __dirname,
             manifest: require('./src/vendor/libs/react-manifest.json'),
         }),
+        // new webpack.DllReferencePlugin({
+        //     context: __dirname,
+        //     manifest: require('./src/vendor/libs/reactdom-manifest.json'),
+        // }),
         new webpack.DllReferencePlugin({
             context: __dirname,
             manifest: require('./src/vendor/libs/immutable-manifest.json'),
@@ -221,6 +259,7 @@ module.exports = {
             context: __dirname,
             manifest: require('./src/vendor/libs/corejs-manifest.json'),
         }),
+
     ],
     postcss: function () {
         return [autoprefixer];

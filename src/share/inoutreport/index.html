@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+	<title></title>
+  <link rel="stylesheet" type="text/css" href="./share.css">
+</head>
+<body>
+  <span class = 'loading'>LOADING...</span>
+	<div id="app">
+  <div class = 'out-date' style="display: none">
+    <img src="./img/ico.png">
+    <h3>分享已过期  <time class="timers">5s</time>后返回首页</h3>
+  </div>
+  <div class = 'mobile' style="display:none">
+          <div class ='mobile-title'>
+              <h3>
+                  <strong class = 'orgName'>1234</strong>
+                  <strong>收支统计表</strong>
+                  <time class="pariod">{pariod}</time>
+              </h3>
+          </div>
+          <div class = 'mobileForm'>
+              <div class = 'mobileFormItem filter'>
+                  <div class= 'formItemTitle'>
+                      <h3>过滤条件</h3>
+                      <h3  class="fliter-txt">{mobileData.profit}</h3>
+                  </div>
+              </div>
+              <div class = 'mobileFormItem filter-detial'>
+                  <div class= 'formItemTitle'>
+                      <h3>部门</h3>
+                      <h3  class="fliter-detial-txt">人力资源部</h3>
+                  </div>
+              </div>
+              <div class = 'mobileFormItem profit'>
+                  <div class= 'formItemTitle'>
+                      <h3 class="profit-title">收支差额</h3>
+                      <h3  class="profit-txt">{mobileData.profit}</h3>
+                  </div>
+              </div>
+              <div class = 'mobileFormItem pre'>
+                  <div class= 'formItemTitle'>
+                      <h3>收入/支出</h3>
+                      <h3 class="pre-txt">{mobileData.pre}</h3>
+                  </div>
+              </div>
+              <div class = 'mobileFormItem tax'>
+                  <div class= 'formItemTitle'>
+                      <h3>税额</h3>
+                      <h3 class="tax-txt">{mobileData.tax}</h3>
+                  </div>
+              </div>
+              <div class = 'mobileFormItem inCol'>
+                  <div class= 'formItemTitle'>
+                      <h3>收入</h3>
+                      <h3 class="inCol-total">{mobileData.inCol.total}</h3>
+                  </div>
+                  <div class = 'formContent inCol-content'>
+                      {::this.getItems(mobileData.inCol.childrens)}
+                  </div>
+              </div>
+              <div class = 'mobileFormItem outCol'>
+                  <div class= 'formItemTitle'>
+                      <h3>支出</h3>
+                      <h3 class="outCol-total">{mobileData.outCol.total}</h3>
+                  </div>
+                  <div class = 'formContent outCol-content'>
+                      {::this.getItems(mobileData.inCol.childrens)}
+                  </div>
+              </div>
+          </div>
+          <!--<figure class = 'mobile-QRcode'>
+              <img src ='./img/Group3.png'/>
+              <figcaption>扫一扫关注“易嘉人公众号”<br/>www.rrtimes.com</figcaption>
+          </figure>-->
+  </div>
+
+  </div>
+  <script src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+	<script src="./share.js?v=20170825"></script>
+</body>
+</html>

@@ -19,7 +19,6 @@ export function initView(orgId, initTabData, cb, appParams) {
             currentOrgId,
             dzOrgId = undefined,
             isServiceProvider = false,
-            domain = constant.onlineDomain,
             isDevelop = domain.find(e => window.location.href.indexOf(e.name) != -1) ? false : window.location.href.indexOf('?dev') != -1
         if (orgId) {
             currentOrgId = orgId
@@ -89,10 +88,7 @@ export function initView(orgId, initTabData, cb, appParams) {
 
             let companyName = data.value.currOrg.name,
                 mobile = data.value.user.mobile,
-                userName = data.value.user.name,
-                friendName = constant.APPINFO.getAppName(data.value.currOrg.appId),
-                industryName = constant.INDUSTRY.getIndustryName(data.value.currOrg.industry)
-            window.qimoClientId={nickName:userName,customField:{'伙伴名称':friendName,'公司名称':companyName,'手机号':mobile,'行业':industryName}}
+                userName = data.value.user.name
             //menuId = 2200 = 汇算清缴
             if (data.value.currOrg.industry != 1006 
                 && !(data.value.currOrg.industry == 1007 && data.value.currOrg.industryVersion == 1 /*不含税版本的幼教行业隐藏 2018-08-30 by zq*/) 
@@ -1078,6 +1074,38 @@ export function addTab(title, url, props) {
         }
         webapi.user.log(injectFuns.post, [{ url: url, pageName: title, actionTime: new Date() }])
         location.host != "www.rrtimes.com" && window._hmt && _hmt.push && _hmt.push(['_trackPageview', '/' + url]) //百度统计单页应用接口。
+    }
+}
+
+//打开几个特殊，，页面前添加日志操作
+export function createUserLog(id,name){
+    return (injectFuns) => {
+        let moduleName=name
+        switch(id){
+            case 2200:
+                moduleName='智能税务/一键汇算清缴'
+                break
+            case 214001:
+                moduleName='管理分析/资产负债情况'
+                break
+            case 214002:
+                moduleName='管理分析/利润情况'
+                break
+            case 214003:
+                moduleName='管理分析/现金流量分析'
+                break
+            case 2120:
+                moduleName='风险检查'
+                break
+        }
+        //添加用户导操作日志
+        let obj={
+            operateType:2,
+            source:1,
+            module:moduleName,
+            logExplain:'访问页面'
+        }
+        webapi.operateLog.createLogger(injectFuns.post,obj)
     }
 }
 

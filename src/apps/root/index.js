@@ -8,6 +8,7 @@ export default class RootComponent extends React.Component{
 
 		this.handleRedirect =this.handleRedirect.bind(this)
 		let appPath = document.location.hash.replace("#","") || document.location.pathname || ""
+
 		if(appPath.indexOf("apps/")==0){
 			if(appPath[appPath.length-1]=="/") appPath = appPath.substring(0,appPath.length-1)
 			this.props.setCurrentAppPath(appPath, {})
@@ -15,8 +16,6 @@ export default class RootComponent extends React.Component{
 			if(sessionStorage["root/logined"]=="1"){
 				this.handleLoginSuccess('apps/portal', true);
 			}else{
-				console.log('走了登录页');
-				
 				this.props.setCurrentAppPath('apps/login/login', {}) //转登录页
 			}
 		}
@@ -71,6 +70,8 @@ export default class RootComponent extends React.Component{
 	handleRedirect(appPath, props){
 		if(props===true){
 			location.hash = appPath
+			let version = window.localStorage["version"];
+	
 		}else{
 			this.props.setCurrentAppPath(appPath, props)
 		}
@@ -80,9 +81,11 @@ export default class RootComponent extends React.Component{
 
 
 		//App按path隔离的state在this.props.payload中获取
-		let currentAppPath = this.props.payload.get('currentAppPath') || 'apps/login/login',
+		let currentAppPath = this.props.payload.get('currentAppPath') || 'apps/login/landing',
 			currentAppProps = this.props.payload.get('currentAppProps') || {}
-		
+		// apps/portal
+		// ref={currentAppPath}
+		// path={currentAppPath}
 		return (
 			<AppLoader
 				ref={currentAppPath}

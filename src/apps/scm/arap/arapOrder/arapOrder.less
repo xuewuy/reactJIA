@@ -1,0 +1,577 @@
+@import '../../../../assets/styles/custom.less';
+
+@araporder-prefix-cls: araporder;
+.@{araporder-prefix-cls} {
+
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  align-items: center;
+  padding-top: 10px;
+
+  &-voucher {
+    overflow-y: auto;
+    width: 1180px;
+
+      .ant-popover-inner-content {
+            padding: 0;
+            background-color: #e5e6e6;
+        }
+      .araporder-adjunct {
+        padding-top: 10px;
+          cursor: pointer;
+          color: #2db7f5;
+      }
+      .adjunct {
+          .z-form {
+              padding-right: 0;
+              
+              .z-formitems {
+                  margin-bottom: 0;
+                  
+                  .ant-form-item-control {
+                      text-align: center;
+                  }
+              }
+          }
+      }
+  }
+    
+    &-isEnableSumVisible {
+        .araporder-body {
+            .z-grid {
+                .fixedDataTableLayout_main {
+                    border-bottom: 0;
+                    border-left: 0;
+                    border-right: 0;
+                    
+                    .fixedDataTableLayout_rowsContainer > div:nth-child(2) {
+                        .fixedDataTableRowLayout_body > div:first-child {
+                            .fixedDataTableCellGroupLayout_cellGroup {
+                                border-left: 1px solid #ccc;
+                                border-right: 1px solid #ccc;
+                            }
+                        }
+                    }
+                    
+                    .fixedDataTableLayout_rowsContainer > div:nth-child(4) {
+                        display: none; 
+                    }
+                }
+            }
+        }
+        
+        
+    }
+
+  &-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 35px;
+
+    &-shortcut-icon {
+      position: relative;
+      height: 16px;
+      width: 30px;
+    }
+
+    &-shortcut-icon::before {
+      font-family: "rriconfont" !important;
+      content: '\e6de';
+      font-size: 32px;
+      font-style: normal;
+      position: absolute;
+      top: -14px;
+      cursor: pointer;
+      color: #8cca48;
+    }
+
+    >span {
+      font-size: 22px;
+    }
+
+    &-left-div {
+      width: 300px;
+    }
+
+    &-right-div {
+      width: 300px;
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    &-right {
+      margin-left: 8px !important;
+    }
+
+    &-left {
+      margin-right: 8px;
+    }
+
+
+
+    .ant-btn-group button {    //上下翻页按钮,不要间距
+      margin: 0px;
+    }
+
+    .ant-btn-primary {
+      height: 26px;
+      padding: 2px 12px;
+      border-radius: 2px;
+    }
+  }
+
+  &-title {
+    display: flex;
+    justify-content: center;
+
+    span {
+      font-size: 22px;
+    }
+  }
+
+  &-stitle {
+    display: flex;
+    padding:5px 30px;
+    justify-content: left;
+    span {
+      font-size: 14px;
+    }
+  }
+  &-function-print{
+      background-color: #88CC48;
+      border-radius: 2px;
+      width:26px;
+      height: 26px;
+      border-color:#88CC48;
+      padding: 2px 2px 2px 2.4px!important;
+      border: 0px!important;
+      margin-left: 8px;
+      &:hover{
+          background-color: #6bbb20;
+      }
+    }
+
+    &-function-print i::before{
+      font-family: "rriconfont" !important;
+      content: '\E643';
+      font-size: 22px;
+      font-style: normal;
+      float:left;
+      color:#fff;
+    }
+  &-line{
+      padding:0;
+      background-color:#ced1d2;
+      width:96%;
+      height:1px;
+      margin:8px auto;
+  }
+
+  .ant-card {
+    .ant-card-body {
+      padding: 10px 5px;
+    }
+  }
+
+  &-audited-icon {
+    height:26px;
+    width:60px;
+    margin-left:8px;
+  }
+
+  &-tips-nocustomer{
+    height: 200px;
+    padding-left: 200px;
+    margin-top: -120px;
+  }
+
+  &-tips-hascustomer{
+    height: 200px;
+    height:100px;
+    margin:0 auto;
+    padding-left: 270px;
+  }
+   &-tips-number{
+      font-size: 36px;
+      color: #2db7f5;
+      margin-top: 52px;
+      position: fixed;
+      padding-left: 10px;
+  }
+
+  &-header {
+    padding: 0px 35px;
+    position: relative;
+    display: flex;
+
+    .headerFormDate {
+      padding-left: 40px;
+      flex: 1;
+    }
+      
+      .z-form {
+          padding-right: 20px;
+          flex: 1;
+      }
+      
+      .araporder-accessory {
+          position: absolute;
+          right: 30px;
+          top: 5px;
+          color: #2db7f5;
+          cursor: pointer;
+      }
+      
+      .araporder-accessory:hover {
+          color: #57c5f7;
+      }
+
+    .z-formitems {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      margin-top: 8px;
+      margin-bottom: 4px;
+        
+        .arapOrderSource {
+            
+            input {
+                border-top: 0px;
+                border-left: 0px;
+                border-right: 0px;
+                text-align: center;
+                border-radius: 0px;
+            }
+            
+            .ant-input[disabled], fieldset[disabled] .ant-input {
+                background-color: #fff;
+            }
+        }
+
+      .ant-form-item-label {
+        padding: 0px;
+        display: flex;
+        align-items: center;
+      }
+        
+        .voucherSource {
+            flex: 1;
+            padding-left: 50px;
+            .ant-form-item-control {
+                width: 100%;
+                height: 75%;
+                border-bottom: 1px solid #d9d9d9;  
+                .ant-btn{
+                    background-color: #fff;
+                    border: none;
+                    
+                    span {
+                        color:#2db7f5;
+                    }
+                }
+            }
+        }
+    }
+
+    .ant-form-item {
+      display: flex;
+      margin: 0px;
+    }
+
+    .ant-form-item-control {
+      margin-left: 5px;
+      display: flex;
+      line-height: 28px;
+
+
+
+      .ant-calendar-picker {
+        input {
+          height: 26px;
+        }
+      }
+
+      >div {
+        display: flex;
+      }
+    }
+
+    &-attachment-icon::before {
+      font-family: "rriconfont" !important;
+      content: '\e642';
+      font-size: 32px;
+      font-style: normal;
+      // opacity: 0.6;
+    }
+
+  }
+    &-body-container-img {
+        position: absolute;
+        z-index: 1;
+    }
+    &-body-container-img2 {
+        position: absolute;
+        z-index: 1;
+    }
+
+  &-body {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    .z-grid {
+      width: 1120px;
+      background-color: #fff;
+  
+      .z-grid-displaycell-subtitles {
+        border-top: 1px solid #eeeeee;
+      }
+
+      .public_fixedDataTableCell_cellContent {
+        padding: 0px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        color:#444;
+        label {
+          margin-bottom: 0px;
+          line-height: 24px;
+          color: #444444;
+          font-family: 'Microsoft Yahei'
+        }
+
+        span {
+          line-height: 24px;
+        }
+      }
+
+      .public_fixedDataTableCell_main, .public_fixedDataTableRow_highlighted .public_fixedDataTableCell_main {
+        border-right-style: solid;
+        border-bottom-style: solid;
+        border-width: 0 1px 1px 0;
+
+        div {
+          height: 100%;
+          width: 100%;
+            
+            .ant-btn {
+                line-height: 1;
+                padding: 0 10px;
+            }
+        }
+      }
+      .ant-select-selection {
+        border-radius: 0;
+      }
+
+      .ant-select-selection__rendered {
+        padding: 0;
+
+        input {
+          padding: 5px;
+        }
+      }
+
+      .ant-input[disabled]{
+        background-color:#fff;
+        border:0px;
+        color:#444;
+      }
+
+
+      .ant-input {
+        text-align: right !important;
+        height: 100%;
+        border-radius: 0px;
+      }
+     
+      .ant-input-wrapper .z-input{
+        height: 37px !important;
+        line-height: 37px !important;
+        margin:1px;
+        width:177px;
+        input{
+          overflow: hidden;
+        }
+     }
+      .select-with-button {
+        .ant-input-group {
+          display: inline;
+        }
+
+        input {
+          text-align: left;
+          margin-right: 30px;
+          width: 85%;
+        }
+
+        button {
+          padding: 4px 10px;
+          margin-top: -50px;
+          font-size: 12px;
+          background: none;
+          border: none;
+          color: #2db7f5;
+          float: right;
+          height: 100%;
+            width: 50px;
+        }
+          button:hover{
+              color:#57c5f7;  //会计科目里的科目色值调整
+          }
+      }
+    }
+
+    &-del-div {   //右侧的行删除图标
+      width: 30px;
+      color: #b3b3b3;
+      :hover{
+        color: #00aff0;
+      }
+    }
+    &-del-icon::before {
+      font-family: "rriconfont" !important;
+      content: '\e6dc';
+      font-size: 26px;
+      font-style: normal;
+    }
+
+    &-insert-div {   //左侧的行插入图标
+      width: 30px;
+      color: #b3b3b3;
+      :hover{
+        color: #00aff0;
+      }
+    }
+    &-insert-icon::before {
+      font-family: "rriconfont" !important;
+      content: '\e6df';
+      font-size: 26px;
+      font-style: normal;
+      //color: #b3b3b3;
+    }
+
+    .public_fixedDataTableCell_cellContent label {
+      font-size: 14px;
+      font-weight: lighter;
+    }
+  }
+
+    &-imgHeight {
+        height:0;
+    }
+    &-imgHeight1 {
+        height:80px;
+    }
+    &-imgHeight2 {
+        height:100px;
+    }
+
+  &-footer {
+    //padding-top: 20px;
+    padding: 10px 35px;
+    /*display: flex;*/
+    // flex-direction: row;
+    justify-content: space-between;
+    position: relative;
+      
+      .araporder-columnUpper {   //底部金额合计的位置调整
+          position: absolute;
+          top: -32px;
+          z-index: 2;
+          left: 50px;
+      }
+
+    label {  //"制单人""审核人"的字号
+      font-size: 14px;
+      font-weight: normal;
+      width: 200px;
+    }
+
+    &-right-div{
+      width: 200px;
+      display: flex;
+      justify-content: flex-end;
+    }
+    &-right {
+      margin-left: 6px !important;
+    }
+  }
+
+  .public_fixedDataTableCell_main {
+    background-image: none;
+  }
+
+  .public_fixedDataTableCell_main .z-grid-displaycell {
+    height: 30px;
+    padding: 8px;
+    width: 100%;
+    font-size: 14px;
+  }
+
+  .fixedDataTableRowLayout_rowWrapper:hover .public_fixedDataTableCell_main {
+    background-color: Azure;
+  }
+
+  //grid分隔线和底色
+  .fixedDataTableLayout_main {
+    //border: 1px #E7E7E7 !important;
+    border-color: #E7E7E7;
+  }
+
+  .public_fixedDataTableCell_main, .public_fixedDataTableRow_highlighted .public_fixedDataTableCell_main{
+    border: 1px #E7E7E7;
+    background: #ffffff;
+  }
+
+  .public_fixedDataTableRow_main {
+    border: 1px #E7E7E7;
+    background: #ffffff;
+  }
+  //header行的底色
+  .public_fixedDataTable_header .public_fixedDataTableCell_main {
+    background: #f6f7f8 linear-gradient(#f6f7f8, #f6f7f8);  //渐变能够使得hover不起作用
+  }
+  //合计行的底色
+  .public_fixedDataTable_footer {
+    .public_fixedDataTableCell_main {
+      background: #fff6ea linear-gradient(#fff6ea, #fff6ea);
+      border-bottom-width: 0px;
+    }
+  }
+  //鼠标所在行的颜色
+  .fixedDataTableRowLayout_rowWrapper:hover .public_fixedDataTableCell_main {
+    background-color: #D7FAFD;
+  }
+
+  // .fixedDataTableCellGroupLayout_cellGroup{
+  //   .public_fixedDataTableCell_cellContent{
+  //       text-align: -webkit-right;
+  //       padding-right:8px;
+  //   }
+  // }
+
+}
+
+.lblStyle {
+  padding-left:10px;
+}
+
+.greenStyle{
+  color:#6bbb20;
+  font-weight: bold;
+}
+
+.redStyle{
+  color:#c00000;
+  font-weight: bold;
+}
+.specialFooter .ant-modal-footer{  //特殊弹窗底部按钮不能居中
+    display: block;
+}

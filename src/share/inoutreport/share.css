@@ -1,0 +1,153 @@
+body,h3{
+    margin:0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimSun, sans-serif;
+    color: rgb(102, 102, 102);
+    
+}
+body{
+    font-size: 12px;
+}
+img{
+    border:none;
+    vertical-align: top;
+}
+h3{
+    font-weight: 500;
+
+}
+strong{
+    font-weight: bolder;
+}
+.mobile-title{
+    padding:10px;
+}
+.mobile-title h3{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 1.4;
+    padding-top: 10px;
+    font-size: 24px;
+}    
+.filter,.filter-detial{
+    display:none;
+}   
+
+.mobileForm .formItemTitle{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 3.7% 0 13%;
+    height: 45px;
+    line-height: 45px;
+    border-bottom: 1px solid #E7E7E7;
+    
+}
+.mobileForm .formItemTitle h3{
+    line-height: 45px;
+    height: 45px;
+    font-size: 17px;
+}
+.mobileForm  .filter-detial {
+        height: auto;
+}
+.mobileForm  .filter-detial h3,.mobileForm  .filter-detial .formItemTitle{
+    height: auto;
+}
+.filter-detial .formItemTitle h3{
+    height: auto;
+    min-width: 3em;
+}
+.filter-detial .formItemTitle .fliter-detial-txt{
+    line-height: 1.3;
+    padding-top: 11px;
+}
+
+.mobileForm .formItemTitle h3:last-child{
+    font-weight: 400;
+}
+.mobileForm .formContentItem{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 3.7% 10px 13%;
+    line-height: 20px;
+    font-size: 15px;
+    border-bottom: 1px solid #E7E7E7;
+
+}
+
+.profit .formItemTitle{
+    background-image: url(./img/profit.png);
+    background-repeat: no-repeat;
+    background-position: 4%;
+    background-size: 2.4em;
+}
+.pre .formItemTitle{
+    background-image: url(./img/pre.png);
+    background-repeat: no-repeat;
+    background-position: 4%;
+    background-size: 2.4em;
+}
+.tax .formItemTitle{
+    background-image: url(./img/tax.png);
+    background-repeat: no-repeat;
+    background-position: 4%;
+    background-size: 2.4em;
+}
+.inCol .formItemTitle{
+    background-image: url(./img/Group4.png);
+    background-repeat: no-repeat;
+    background-position: 4%;
+    background-size: 2.4em;
+}
+.outCol .formItemTitle{
+    background-image: url(./img/Group5.png);
+    background-repeat: no-repeat;
+    background-position: 4%;
+    background-size: 2.4em;
+}
+.mobile{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    display: block;
+    padding: 0;
+    background: #fff;
+}
+.mobile-QRcode{
+    margin: 20px auto;
+    width:60%;
+    
+    
+}
+.out-date{
+    padding-top: 20%;
+    text-align: center;
+}
+.out-date img{
+    width: 40%;
+}
+.out-date h3{
+    margin-top: 5%;
+    text-align: center;
+    color: #8b9193;
+
+}
+.out-date h3 time{
+    color: #ff7b69;
+}
+.mobile-QRcode img{
+    width: 100%;
+}
+.mobile-QRcode figcaption{
+    padding: 8px;
+    text-align: center;
+    font-size: 14px;
+}
+::selection {
+    background: #2db7f5;
+    color: #fff;
+}
+::-webkit-scrollbar-track {
+    border-radius: 0px;
+    background-color: transparent;
+}

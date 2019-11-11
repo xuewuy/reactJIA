@@ -5,7 +5,7 @@ reducer函数，状态变化的处理函数
  */
 export function auth(state,logined){
 	state = state.set('auth', logined)
-	return setCurrentAppPath(state, logined?"app/portal" : "app/login/login")
+	return setCurrentAppPath(state, logined?"apps/portal" : "apps/login/login")
 }
 
 

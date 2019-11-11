@@ -67,9 +67,11 @@ export default class PortalLeftComponent extends Component {
             industry = getterByField('currentOrg.industry')
         let menu = this.findMenu(menus, e.key)
         this.props.setMenuSelectedKeys(e.key)
+        if(menu.get('id')== 2200 ||menu.get('id')== 214001 ||menu.get('id')== 214002 ||menu.get('id')== 214003 || menu.get('id')==2120 ){
+            this.props.createUserLog(menu.get('id'),menu.get('name'))
+        }
         if(menu.get('requestUrl') == 'apps/fi/manageTax/otherTax') {
             this.props.openIts()
-
         } else {
             this.props.addTab(menu.get('name'), menu.get('requestUrl'), {initData:menu.get('initData')})
         }

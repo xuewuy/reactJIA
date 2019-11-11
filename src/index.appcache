@@ -1,0 +1,10 @@
+﻿CACHE MANIFEST
+#注释 暂未开启
+CACHE:
+/favicon.ico
+/vendor.css
+vendor/bootstrap/css/bootstrap.min.css
+vendor/fixedDataTable/fixed-data-table.min.css
+vendor/jquery/jquery.min.js
+vendor/bootstrap/js/bootstrap.min.js
+vendor/libs/index.js

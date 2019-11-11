@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+  <title>税款通知</title>
+  <link rel="stylesheet" type="text/css" href="./share.css">
+</head>
+<body>
+  <div id="app">
+    <div class = 'out-time' style="display: none">
+        <p>分享已过期  <time class="timers">5s</time>后返回首页</p>
+      </div>
+    <div class = 'mobile' style="display:none">
+      <div class = 'out-date' style="display: none">
+        <img src="./img/yc.png">
+        <!-- <p>分享已过期  <time class="timers">5s</time>后返回首页</p> -->
+        <p>分享已过期,页面已失效。</p>
+      </div>
+    	<div class='shareContent' style="display:none">
+        <div class='shareText0'>
+        </div>
+        <div class='shareText1'>
+      		<p class='shareInfo'>尊敬的客户，您好！</p>
+      		<p class='shareInfo' id='shareInfo'>年月份应缴个人所得税税款金额：</p>
+        </div>
+        <div class='shareText2'>
+      		<p class='shareAmount'><span class='shareRMB'></span><span class='shareDate'>-</span></p>
+      		<p class='shareRemark'>请您确认，感谢您的支持与配合！<br/>收到反馈结果后，该页面内容将会失效。</p>
+        </div>
+        <div class='shareText3'>
+
+      		<p class='sharePhone'>代账张会计：<a href='wtai://wp//mc;10086'>138 8888 9999</a></p>
+      		<button class='shareWhat' onClick='shareJS.handleWhatClick()'>有疑问？</button>
+      		<button class='shareSure' onClick='shareJS.handleSureClick()'>确认税金</button>
+        </div>
+    	</div>
+      <div class = 'alreadyWhat' style="display:none">
+        <img src='img/yyw.png' />
+        <p>反馈结果已提交，代账会计会尽快与您联系，感谢您的支持和信任！</p>
+      </div>
+      <div class = 'alreadySure' style="display:none">
+        <img src='img/qr.png' />
+        <p>税金确认成功，感谢您的支持和信任！</p>
+      </div>
+    	<p class='shareFooter'><span class='yjcs'>【易嘉人财税】</span></p>
+      <div class='promtBox'>
+        <div class='promtBg'>
+        </div>
+        <div class='promtMessage'>
+          <div class='promtBoxTitle'><button onClick={shareJS.handleCloseClick()} class='clossBtn'></button></div>
+          <div class='promtBoxContent'>
+            <div class='promtBoxImg'><img src='' /></div>
+            <p>请您确认，感谢您的支持与配合！</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <script src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+  <script src="./share.js"></script>
+</body>
+</html>

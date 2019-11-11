@@ -1,0 +1,505 @@
+@import '../../../../assets/styles/custom.less';
+
+@saleorder-prefix-cls: saleorder;
+.@{saleorder-prefix-cls} {
+
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  align-items: center;
+  padding-top: 10px;
+
+  &-voucher {
+    overflow-y: auto;
+    width: 1200px;
+      
+      .ant-popover-inner-content {
+            padding: 0;
+            background-color: #e5e6e6;
+        }
+      .saleorder-adjunct {
+        padding-top: 10px;
+          cursor: pointer;
+          color: #2db7f5;
+      }
+      .adjunct {
+          .z-form {
+              padding-right: 0;
+              
+              .z-formitems {
+                  margin-bottom: 0;
+                  
+                  .ant-form-item-control {
+                      text-align: center;
+                  }
+              }
+          }
+      }
+  }
+
+  &-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 35px;
+
+    &-shortcut-icon {
+      position: relative;
+      height: 16px;
+      width: 30px;
+    }
+
+    &-shortcut-icon::before {
+      font-family: "rriconfont" !important;
+      content: '\e6de';
+      font-size: 32px;
+      font-style: normal;
+      position: absolute;
+      top: -14px;
+      cursor: pointer;
+      color: #8cca48;
+    }
+
+    >span {
+      font-size: 22px;
+    }
+
+    &-left-div {
+      width: 300px;
+    }
+
+    &-right-div {
+      width: 300px;
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    &-right {
+      margin-left: 8px !important;
+    }
+
+    &-left {
+      margin-right: 8px;
+    }
+
+
+
+    .ant-btn-group button {    //上下翻页按钮,不要间距
+      margin: 0px;
+    }
+
+    .ant-btn-primary {
+      height: 26px;
+      padding: 2px 12px;
+      border-radius: 2px;
+    }
+  }
+
+  &-title {
+    display: flex;
+    justify-content: center;
+    span {
+      font-size: 22px;
+    }
+  }
+
+  &-stitle {
+    display: flex;
+    padding:5px 0;
+    justify-content: left;
+    span {
+      font-size: 14px;
+    }
+  }
+  &-function-print{
+      background-color: #88CC48;
+      border-radius: 2px;
+      width:26px;
+      height: 26px;
+      border-color:#88CC48;
+      padding: 2px 2px 2px 2.4px!important;
+      border: 0px!important;
+      margin-left: 8px;
+      &:hover{
+          background-color: #6bbb20;
+      }
+    }
+
+    &-function-print i::before{
+      font-family: "rriconfont" !important;
+      content: '\E643';
+      font-size: 22px;
+      font-style: normal;
+      float:left;
+      color:#fff;
+    }
+  &-line{
+      padding:0;
+      background-color:#ced1d2;
+      width:100%;
+      height:1px;
+  }
+
+  .ant-card {
+    .ant-card-body {
+      padding: 10px 5px;
+    }
+  }
+
+  &-audited-icon {
+    height:26px;
+    width:60px;
+    margin-left:8px;
+  }
+
+  &-header {
+    padding: 8px 35px;
+    position: relative;
+    display: flex;
+      
+    .headerFormDate {
+      padding-left: 40px;
+      flex: 1;
+    }
+      
+      .z-form {
+          padding-right: 20px;
+          flex: 1;
+      }
+      
+      .saleorder-accessory {
+          position: absolute;
+          right: 30px;
+          top: 5px;
+          color: #2db7f5;
+          cursor: pointer;
+      }
+      
+      .saleorder-accessory:hover {
+          color: #57c5f7;
+      }
+
+    .z-formitems {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      margin-top: 6px;
+      margin-bottom: 4px;
+        
+      .saleOrderSource {
+          input {
+              border-top: 0px;
+              border-left: 0px;
+              border-right: 0px;
+              text-align: center;
+              border-radius: 0px;
+          }
+          
+          .ant-input[disabled], fieldset[disabled] .ant-input {
+              background-color: #fff;
+          }
+      }
+
+    .ant-form-item-label {
+      padding: 0px;
+      display: flex;
+      align-items: center;
+      label:after{
+        margin: 0 0px 0 2px
+      }      
+    }        
+      .voucherSource {
+          flex: 1;
+          padding-left: 50px;
+          .ant-form-item-control {
+              width: 100%;
+              height: 75%;
+              border-bottom: 1px solid #d9d9d9;  
+              .ant-btn{
+                  background-color: #fff;
+                  border: none;
+                  
+                  span {
+                      color:#2db7f5;
+                  }
+              }
+          }
+      }
+    }
+
+    .ant-form-item {
+      display: flex;
+      margin: 0px;
+    }
+
+    .ant-form-item-control {
+      margin-left: 5px;
+      display: flex;
+      line-height: 28px;
+      .ant-calendar-picker {
+        input {
+          height: 26px;
+        }
+      }
+      >div {
+        display: flex;
+      }
+    }
+
+    &-attachment-icon::before {
+      font-family: "rriconfont" !important;
+      content: '\e642';
+      font-size: 32px;
+      font-style: normal;
+      // opacity: 0.6;
+    }
+
+  }
+
+  &-body {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    .z-grid {
+      width: 1200px;
+      background-color: #fff;
+  
+      .z-grid-displaycell-subtitles {
+        border-top: 1px solid #eeeeee;
+      }
+
+      .public_fixedDataTableCell_cellContent {
+        padding: 0px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        color:#444;
+        label {
+          margin-bottom: 0px;
+          line-height: 24px;
+          color: #444444;
+          font-family: 'Microsoft Yahei'
+        }
+        span {
+          line-height: 24px;
+        }
+      }
+
+      .public_fixedDataTableCell_main, .public_fixedDataTableRow_highlighted .public_fixedDataTableCell_main {
+        border-right-style: solid;
+        border-bottom-style: solid;
+        border-width: 0 1px 1px 0;
+
+        div {
+          height: 100%;
+          width: 100%;            
+            .ant-btn {
+                line-height: 1;
+                padding: 0 10px;
+            }
+        }
+        .ant-select-arrow{
+          display:none;
+        }
+      }
+      .ant-select-selection {
+        border-radius: 0;
+      }
+      .ant-select-selection__rendered {
+        padding: 0;
+
+        input {
+          padding: 5px;
+        }
+      }
+      .ant-input[disabled]{
+        background-color:#fff;
+        border:0px;
+        color:#444;
+      }
+      .ant-input-number{
+        border-radius: 0px;
+      }
+      .ant-input-number-input{
+        text-align:right;
+        font-size: 14px;
+        display: flex;
+        justify-content:center;
+        height: 37px;
+      }
+      .ant-input {
+        text-align: right !important;
+        height: 100%;
+        border-radius: 0px;
+      }
+
+      .ant-select-selection-selected-value{
+        line-height:37px;
+      }
+     
+      .ant-input-wrapper .z-input{
+        height: 37px !important;
+        line-height: 37px !important;
+        margin:1px;
+        font-size:14px;
+        width:107px;
+        input{
+          overflow: hidden;
+        }
+     }
+      .select-with-button {
+        .ant-input-group {
+          display: inline;
+        }
+
+        input {
+          text-align: left;
+          margin-right: 30px;
+          width: 85%;
+        }
+
+        button {
+          padding: 4px 10px;
+          margin-top: -40px;
+          font-size: 12px;
+          background: none;
+          border: none;
+          color: #2db7f5;
+          float: right;
+          height: 100%;
+            width: 50px;
+        }
+          button:hover{
+              color:#57c5f7;
+          }
+      }
+    }
+
+    .public_fixedDataTableCell_cellContent label {
+      font-size: 14px;
+      font-weight: lighter;
+    }
+  }
+
+  &-footer {
+    padding: 5px 35px;
+    justify-content: space-between;
+    position: relative;
+      
+      .saleorder-columnUpper {
+          position: absolute;
+          top: -32px;
+          z-index: 2;
+          left: 50px;
+      }
+
+    label {  //"制单人""审核人"的字号
+      font-size: 14px;
+      font-weight: normal;
+      width: 200px;
+    }
+
+    &-right-div{
+      width: 200px;
+      display: flex;
+      justify-content: flex-end;
+    }
+    &-right {
+      margin-left: 6px !important;
+    }
+  }
+
+  .public_fixedDataTableCell_main {
+    background-image: none;
+  }
+
+  .public_fixedDataTableCell_main .z-grid-displaycell {
+    height: 30px;
+    padding: 8px;
+    width: 100%;
+    font-size: 14px;
+  }
+
+  .fixedDataTableRowLayout_rowWrapper:hover .public_fixedDataTableCell_main {
+    background-color: Azure;
+  }
+
+  //grid分隔线和底色
+  .fixedDataTableLayout_main {
+    //border: 1px #E7E7E7 !important;
+    border-color: #E7E7E7;
+  }
+
+  .public_fixedDataTableCell_main, .public_fixedDataTableRow_highlighted .public_fixedDataTableCell_main{
+    border: 1px #E7E7E7;
+    background: #ffffff;
+  }
+
+  .public_fixedDataTableRow_main {
+    border: 1px #E7E7E7;
+    background: #ffffff;
+  }
+  //header行的底色
+  .public_fixedDataTable_header .public_fixedDataTableCell_main {
+    background: #f6f7f8 linear-gradient(#f6f7f8, #f6f7f8);  //渐变能够使得hover不起作用
+  }
+  //合计行的底色
+  .public_fixedDataTable_footer {
+    .public_fixedDataTableCell_main {
+      background: #fff6ea linear-gradient(#fff6ea, #fff6ea);
+      border-bottom-width: 0px;
+    }
+
+  }
+
+  // .fixedDataTableCellGroupLayout_cellGroup{
+  //   .public_fixedDataTableCell_cellContent{
+  //       text-align: -webkit-right;
+  //       padding-right:8px;
+  //   }
+  // }
+
+.z-grid .fixedDataTableLayout_rowsContainer .fixedDataTableRowLayout_rowWrapper .public_fixedDataTable_header{
+  background-color:#fff;
+}
+
+  //鼠标所在行的颜色
+  .fixedDataTableRowLayout_rowWrapper:hover .public_fixedDataTableCell_main {
+    background-color: #F3F9F0;
+  }
+ 
+  &-footer-right-div > div {
+    padding-top: 8px;
+  }
+}
+.lblStyle {
+  margin-left: 20px;
+  padding-right:10px;
+  border-bottom-color: #000;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  cursor: pointer;
+  white-space:nowrap;
+  text-overflow: ellipsis;
+}
+.spaceStyle{
+  width:5px;
+}
+
+.greenStyle{
+  color:#6bbb20;
+  font-weight: bold;
+}
+
+.redStyle{
+  color:#c00000;
+  font-weight: bold;
+}
+.specialFooter .ant-modal-footer{  //特殊弹窗底部按钮不能居中
+    display: block;
+}

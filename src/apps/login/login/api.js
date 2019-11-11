@@ -30,7 +30,7 @@ export const meta = {
             title: '密码',
             autocomplete:'off',
             type: 'string',
-            component: 'Password',
+            component: 'Input',
             showLabel: false,
             placeholder: '请输入密码/邀请码',
             bindField: 'password',
@@ -40,15 +40,13 @@ export const meta = {
                     message: '不能为空'
                 }]
             },
-            height: 45,
-            after:'forgetPassword'
+            height: 45
         },{
             name: 'remember',
             title: '5天内自动登录',
             showLabel: false,
             type: 'bool',
-            bindField: 'remember',
-            after:'register'
+            bindField: 'remember'
         }]
     }]
 }

@@ -7,15 +7,6 @@ function generator(props) {
 	return (ps)=>{ 
 		return Basic({...ps,prefixCls:props.prefixCls})
 	}
-	/*return Basic=>{
-	    return class Adapter extends Component {
-	      
-	      	render() {
-		        const { prefixCls } = props
-		        return <Basic prefixCls={prefixCls} {...this.props}/>
-    		}
-		}
-	}*/
 }
 
 function Basic(props){
